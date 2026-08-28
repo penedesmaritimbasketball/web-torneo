@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Torneo Internacional 2026</title>
+  <!-- Tailwind CSS desde CDN para diseño responsive -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+  <!-- Navegación con Selector de Idioma -->
+  <nav class="bg-slate-900 text-white sticky top-0 z-50 shadow-md">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-xl font-bold tracking-wider text-indigo-400">TOURNAMENT 2026</h1>
+      <div class="flex items-center space-x-4 text-sm font-medium">
+        <a href="#info" data-i18n="nav-info" class="hover:text-indigo-400 transition hidden sm:inline">Información</a>
+        <a href="#inscripcion" data-i18n="nav-register" class="bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-2 rounded-lg transition">Inscribirse</a>
+        
+        <!-- Controles para el idioma -->
+        <div class="flex bg-slate-800 rounded-lg p-1 border border-slate-700 ml-2">
+          <button id="btn-es" onclick="cambiarIdioma('es')" class="px-2 py-1 text-xs font-bold rounded bg-indigo-600 text-white">ES</button>
+          <button id="btn-en" onclick="cambiarIdioma('en')" class="px-2 py-1 text-xs font-bold rounded text-gray-400 hover:text-white">EN</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="bg-slate-800 text-white py-16 px-4 text-center border-b border-slate-700">
+    <div class="max-w-4xl mx-auto">
+      <span class="bg-indigo-500/10 text-indigo-400 text-xs font-semibold px-3 py-1 rounded-full border border-indigo-500/20 uppercase tracking-widest" data-i18n="hero-tag">Torneo Internacional</span>
+      <h2 class="text-4xl md:text-6xl font-extrabold mt-4 mb-4" data-i18n="hero-title">Inscripción Oficial de Equipos</h2>
+      <p class="text-lg text-gray-300 max-w-2xl mx-auto mb-8" data-i18n="hero-subtitle">Completa el formulario para solicitar la participación de tu club o academia.</p>
+      <a href="#inscripcion" class="bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-3 px-8 rounded-lg shadow-lg hover:shadow-indigo-500/20 transition inline-block" data-i18n="hero-btn">Ir al Formulario</a>
+    </div>
+  </header>
+
+  <!-- Formulario de Inscripción -->
+  <section id="inscripcion" class="py-12 bg-white">
+    <div class="max-w-2xl mx-auto px-4">
+      <div class="text-center mb-8">
+        <h3 class="text-3xl font-bold" data-i18n="form-title">Formulario de Registro</h3>
+        <p class="text-gray-500 mt-2" data-i18n="form-subtitle">Por favor, rellena todos los campos para que la organización revise tu solicitud.</p>
+      </div>
+
+      <form id="form-torneo" class="space-y-6 bg-slate-50 p-6 sm:p-8 rounded-2xl border border-gray-200 shadow-sm">
+        
+        <!-- Club / Academia -->
+        <div>
+          <label class="block text-sm font-semibold mb-2" data-i18n="label-club">Nombre del Club o Academia *</label>
+          <input type="text" id="club" required placeholder="Ej: CB Barcelona / Youth Academy" class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:outline-none">
+        </div>
+
+        <!-- Categoría -->
+        <div>
+          <label class="block text-sm font-semibold mb-2" data-i18n="label-categoria">Categoría del Equipo *</label>
+          <select id="categoria" required class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:outline-none bg-white">
+            <option value="" data-i18n="opt-select">Selecciona una categoría</option>
+            <option value="U14 Masculino">U14 Masculino / Male</option>
+            <option value="U14 Femenino">U14 Femenino / Female</option>
+            <option value="U16 Masculino">U16 Masculino / Male</option>
+            <option value="U16 Femenino">U16 Femenino / Female</option>
+            <option value="U18 Masculino">U18 Masculino / Male</option>
+            <option value="U18 Femenino">U18 Femenino / Female</option>
+          </select>
+        </div>
+
+        <!-- Nivel Competitivo -->
+        <div>
+          <label class="block text-sm font-semibold mb-2" data-i18n="label-nivel">Nivel competitivo o Liga en la que compiten *</label>
+          <input type="text" id="nivel" required placeholder="Ej: 1ª División Autonómica / National League" class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:outline-none">
+        </div>
+
+        <!-- Grabación de Partido -->
+        <div>
+          <label class="block text-sm font-semibold mb-2" data-i18n="label-video">Grabación de partido (Adjuntar link) *</label>
+          <input type="url" id="videoUrl" required placeholder="https://youtube.com/watch?v=... o VEO/Drive" class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:outline-none">
+          <p class="text-xs text-gray-500 mt-1" data-i18n="video-help">Enlace a YouTube, Vimeo, Veo o Google Drive con acceso público.</p>
+        </div>
+
+        <!-- ¿Más equipos? -->
+        <div>
+          <label class="block text-sm font-semibold mb-2" data-i18n="label-masequipos">¿Estáis interesados en inscribir más equipos del mismo club? *</label>
+          <select id="masEquipos" required class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:outline-none bg-white">
+            <option value="Sí / Yes" data-i18n="opt-yes">Sí / Yes</option>
+            <option value="No / No" data-i18n="opt-no">No / No</option>
+          </select>
+        </div>
+
+        <hr class="border-gray-200 my-4">
+
+        <!-- Datos de Contacto -->
+        <div>
+          <label class="block text-sm font-semibold mb-2" data-i18n="label-contacto">Persona de contacto del club *</label>
+          <input type="text" id="contacto" required placeholder="Nombre y Apellidos" class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:outline-none">
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-sm font-semibold mb-2" data-i18n="label-telefono">Número de teléfono *</label>
+            <input type="tel" id="telefono" required placeholder="+34 600 000 000" class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:outline-none">
+          </div>
+          <div>
+            <label class="block text-sm font-semibold mb-2" data-i18n="label-email">Correo electrónico *</label>
+            <input type="email" id="email" required placeholder="contacto@club.com" class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:outline-none">
+          </div>
+        </div>
+
+        <!-- Botón Enviar -->
+        <button type="submit" id="btn-submit" class="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-3.5 rounded-lg shadow-md transition text-lg mt-4" data-i18n="btn-submit">
+          Enviar Inscripción
+        </button>
+
+        <!-- Estado de envío -->
+        <p id="mensaje-estado" class="text-center text-sm font-semibold hidden"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- Lógica en JavaScript -->
+  <script>
+    // ⚠️ REEMPLAZA ESTA VARIABLE CON LA URL OBTENIDA EN EL PASO 1
+    const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbx07-n5wnVR0WVmnLpLGRkwvxgWlk5knOAHdvMcGVrGKrR572jHiaIO5St_T-NSpMwJOg/exec';
+
+    let idiomaActual = 'es';
+
+    // Diccionario bilingüe
+    const i18n = {
+      es: {
+        'nav-info': 'Información',
+        'nav-register': 'Inscribirse',
+        'hero-tag': 'Torneo Internacional',
+        'hero-title': 'Inscripción Oficial de Equipos',
+        'hero-subtitle': 'Completa el formulario para solicitar la participación de tu club o academia.',
+        'hero-btn': 'Ir al Formulario',
+        'form-title': 'Formulario de Registro',
+        'form-subtitle': 'Por favor, rellena todos los campos para que la organización revise tu solicitud.',
+        'label-club': 'Nombre del Club o Academia *',
+        'label-categoria': 'Categoría del Equipo *',
+        'opt-select': 'Selecciona una categoría',
+        'label-nivel': 'Nivel competitivo o Liga en la que compiten *',
+        'label-video': 'Grabación de partido (Adjuntar link) *',
+        'video-help': 'Enlace a YouTube, Vimeo, Veo o Google Drive con acceso público.',
+        'label-masequipos': '¿Estáis interesados en inscribir más equipos del mismo club? *',
+        'opt-yes': 'Sí',
+        'opt-no': 'No',
+        'label-contacto': 'Persona de contacto del club *',
+        'label-telefono': 'Número de teléfono *',
+        'label-email': 'Correo electrónico *',
+        'btn-submit': 'Enviar Inscripción',
+        'msg-sending': 'Enviando...',
+        'msg-success': '✅ ¡Solicitud enviada con éxito! Nos pondremos en contacto pronto.',
+        'msg-error': '❌ Error al enviar. Revisa los datos e inténtalo de nuevo.'
+      },
+      en: {
+        'nav-info': 'Information',
+        'nav-register': 'Register',
+        'hero-tag': 'International Tournament',
+        'hero-title': 'Official Team Registration',
+        'hero-subtitle': 'Complete the form to apply for your club or academy participation.',
+        'hero-btn': 'Go to Form',
+        'form-title': 'Registration Form',
+        'form-subtitle': 'Please fill out all fields for the committee to review your application.',
+        'label-club': 'Club or Academy Name *',
+        'label-categoria': 'Team Category *',
+        'opt-select': 'Select a category',
+        'label-nivel': 'Competitive level or League *',
+        'label-video': 'Match Recording (Paste Link) *',
+        'video-help': 'Link to YouTube, Vimeo, Veo or Google Drive (public access).',
+        'label-masequipos': 'Are you interested in enrolling more teams from the same club? *',
+        'opt-yes': 'Yes',
+        'opt-no': 'No',
+        'label-contacto': 'Club Contact Person *',
+        'label-telefono': 'Phone Number *',
+        'label-email': 'Email Address *',
+        'btn-submit': 'Submit Application',
+        'msg-sending': 'Sending...',
+        'msg-success': '✅ Application submitted successfully! We will contact you soon.',
+        'msg-error': '❌ Error sending application. Please check the data and try again.'
+      }
+    };
+
+    function cambiarIdioma(lang) {
+      idiomaActual = lang;
+      
+      document.getElementById('btn-es').className = lang === 'es' ? 'px-2 py-1 text-xs font-bold rounded bg-indigo-600 text-white' : 'px-2 py-1 text-xs font-bold rounded text-gray-400 hover:text-white';
+      document.getElementById('btn-en').className = lang === 'en' ? 'px-2 py-1 text-xs font-bold rounded bg-indigo-600 text-white' : 'px-2 py-1 text-xs font-bold rounded text-gray-400 hover:text-white';
+
+      document.querySelectorAll('[data-i18n]').forEach(element => {
+        const key = element.getAttribute('data-i18n');
+        if (i18n[lang][key]) {
+          element.innerText = i18n[lang][key];
+        }
+      });
+    }
+
+    const form = document.getElementById('form-torneo');
+    const btnSubmit = document.getElementById('btn-submit');
+    const mensaje = document.getElementById('mensaje-estado');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      btnSubmit.disabled = true;
+      btnSubmit.innerText = i18n[idiomaActual]['msg-sending'];
+      mensaje.classList.add('hidden');
+
+      const datos = {
+        idioma: idiomaActual.toUpperCase(),
+        club: document.getElementById('club').value,
+        categoria: document.getElementById('categoria').value,
+        nivel: document.getElementById('nivel').value,
+        videoUrl: document.getElementById('videoUrl').value,
+        masEquipos: document.getElementById('masEquipos').value,
+        contacto: document.getElementById('contacto').value,
+        telefono: document.getElementById('telefono').value,
+        email: document.getElementById('email').value
+      };
+
+      try {
+        await fetch(APPS_SCRIPT_URL, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(datos)
+        });
+
+        mensaje.innerText = i18n[idiomaActual]['msg-success'];
+        mensaje.className = 'text-center text-sm font-semibold text-green-600 block mt-4 p-3 bg-green-50 rounded-lg border border-green-200';
+        form.reset();
+      } catch (error) {
+        mensaje.innerText = i18n[idiomaActual]['msg-error'];
+        mensaje.className = 'text-center text-sm font-semibold text-red-600 block mt-4 p-3 bg-red-50 rounded-lg border border-red-200';
+      } finally {
+        btnSubmit.disabled = false;
+        btnSubmit.innerText = i18n[idiomaActual]['btn-submit'];
+      }
+    });
+  </script>
+</body>
+</html>
