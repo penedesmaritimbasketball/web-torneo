@@ -1,50 +1,298 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PENEDÈS MARÍTIM BASKETBALL CUP</title>
+  <title>PENEDÈS MARÍTIM BASKETBALL CUP 2027</title>
   <link rel="icon" type="image/png" href="PenedesMaritimCuplogo.png">
-  <!-- Tailwind CSS desde CDN para diseño responsive -->
+  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans">
+<body class="bg-gray-50 text-gray-800 font-sans antialiased">
 
-  <!-- Navegación con Selector de Idioma -->
-  <nav class="bg-slate-900 text-white sticky top-0 z-50 shadow-md">
-    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-      <h1 class="text-xl font-bold tracking-wider text-indigo-400">TOURNAMENT 2026</h1>
-      <div class="flex items-center space-x-4 text-sm font-medium">
-        <a href="#info" data-i18n="nav-info" class="hover:text-indigo-400 transition hidden sm:inline">Información</a>
-        <a href="#inscripcion" data-i18n="nav-register" class="bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-2 rounded-lg transition">Inscribirse</a>
+  <!--NAVEGACIÓN -->
+  <nav class="bg-slate-900 text-white sticky top-0 z-50 shadow-md backdrop-blur-md bg-opacity-95">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+      
+      <!-- LOGO + TÍTULO -->
+      <a href="#inicio" class="flex items-center space-x-3">
+        <img src="PenedesMaritimCuplogo.png" alt="Logo Penedès Marítim" class="h-10 w-auto">
+        <span class="text-lg font-black tracking-wider text-indigo-400 hidden sm:inline">PENEDÈS MARÍTIM CUP</span>
+      </a>
+
+      <!-- ENLACES DEL MENÚ -->
+      <div class="flex items-center space-x-4 md:space-x-6 text-sm font-medium">
+        <a href="#inicio" data-i18n="nav-inicio" class="hover:text-indigo-400 transition hidden md:inline">Inicio</a>
+        <a href="#torneo2027" data-i18n="nav-torneo2027" class="hover:text-indigo-400 transition hidden md:inline">Torneo</a>
+        <a href="#sedes" data-i18n="nav-sedes" class="hover:text-indigo-400 transition hidden sm:inline">Sedes</a>
+        <a href="#inscripcion" data-i18n="nav-inscripcion" class="bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-2 rounded-lg transition font-semibold">Inscribirse</a>
+        <a href="#contacto" data-i18n="nav-contacto" class="hover:text-indigo-400 transition hidden md:inline">Contacto</a>
         
-        <!-- Controles para el idioma -->
+        <!-- CONTROLES DE IDIOMA -->
         <div class="flex bg-slate-800 rounded-lg p-1 border border-slate-700 ml-2">
           <button id="btn-es" onclick="cambiarIdioma('es')" class="px-2 py-1 text-xs font-bold rounded bg-indigo-600 text-white">ES</button>
           <button id="btn-en" onclick="cambiarIdioma('en')" class="px-2 py-1 text-xs font-bold rounded text-gray-400 hover:text-white">EN</button>
         </div>
       </div>
+
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <header class="bg-slate-800 text-white py-16 px-4 text-center border-b border-slate-700">
-    <div class="max-w-4xl mx-auto">
-      <span class="bg-indigo-500/10 text-indigo-400 text-xs font-semibold px-3 py-1 rounded-full border border-indigo-500/20 uppercase tracking-widest" data-i18n="hero-tag">Torneo Internacional</span>
-      <h2 class="text-4xl md:text-6xl font-extrabold mt-4 mb-4" data-i18n="hero-title">Inscripción Oficial de Equipos</h2>
-      <p class="text-lg text-gray-300 max-w-2xl mx-auto mb-8" data-i18n="hero-subtitle">Completa el formulario para solicitar la participación de tu club o academia.</p>
-      <a href="#inscripcion" class="bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-3 px-8 rounded-lg shadow-lg hover:shadow-indigo-500/20 transition inline-block" data-i18n="hero-btn">Ir al Formulario</a>
+  <!--SECCIÓN: INICIO (HERO) -->
+  <header id="inicio" class="bg-slate-900 text-white py-20 px-4 text-center border-b border-slate-800 relative overflow-hidden">
+    <div class="max-w-5xl mx-auto relative z-10">
+      <span class="bg-indigo-500/20 text-indigo-400 text-xs sm:text-sm font-bold px-4 py-1.5 rounded-full border border-indigo-500/30 uppercase tracking-widest inline-block mb-4" data-i18n="hero-dates">
+        Semana Santa 2027 | Del 25 al 28 de Marzo de 2027
+      </span>
+      <h1 class="text-4xl sm:text-6xl font-black mb-4 tracking-tight" data-i18n="hero-title">PENEDÈS MARÍTIM BASKETBALL CUP</h1>
+      <p class="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-2 font-medium" data-i18n="hero-location">
+        Cunit & Cubelles | Costa Daurada / Garraf
+      </p>
+      <p class="text-sm text-gray-400 max-w-2xl mx-auto mb-8" data-i18n="hero-org">
+        Organizado por OSE BARCELONA, A.B. CUNIT y C.B. CUBELLES
+      </p>
+
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="#inscripcion" class="bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-3.5 px-8 rounded-xl shadow-lg hover:shadow-indigo-500/20 transition text-base" data-i18n="hero-btn-reg">Inscribir Equipo</a>
+        <a href="#torneo2027" class="bg-slate-800 hover:bg-slate-700 text-gray-200 border border-slate-700 font-semibold py-3.5 px-8 rounded-xl transition text-base" data-i18n="hero-btn-more">Ver Detalles del Torneo</a>
+      </div>
     </div>
   </header>
 
-  <!-- Formulario de Inscripción -->
-  <section id="inscripcion" class="py-12 bg-white">
-    <div class="max-w-2xl mx-auto px-4">
-      <div class="text-center mb-8">
-        <h3 class="text-3xl font-bold" data-i18n="form-title">Formulario de Registro</h3>
-        <p class="text-gray-500 mt-2" data-i18n="form-subtitle">Por favor, rellena todos los campos para que la organización revise tu solicitud.</p>
+  <!-- ==================== SECCIÓN: TORNEO 2027 ==================== -->
+  <section id="torneo2027" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Introducción -->
+    <div class="text-center mb-16">
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900" data-i18n="torneo-intro-title">Bienvenidos al Penedès Marítim Cup</h2>
+      <p class="text-gray-600 mt-4 max-w-3xl mx-auto text-base leading-relaxed" data-i18n="torneo-intro-desc">
+        Nace con la misión de ofrecer una experiencia inolvidable donde el baloncesto de calidad, el entorno marítimo y la convivencia se unen en cuatro días de pura pasión deportiva.
+      </p>
+    </div>
+
+    <!-- 3 Pilares -->
+    <div class="grid md:grid-cols-3 gap-8 mb-16">
+      <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm text-center">
+        <div class="w-14 h-14 bg-indigo-50 text-indigo-600 rounded-2xl flex items-center justify-center text-3xl mx-auto mb-4">🏀</div>
+        <h3 class="font-bold text-xl mb-2" data-i18n="pilar1-title">Baloncesto Formativo</h3>
+        <p class="text-gray-600 text-sm" data-i18n="pilar1-desc">Equipos internacionales de diferentes países y niveles competicionales.</p>
       </div>
 
+      <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm text-center">
+        <div class="w-14 h-14 bg-indigo-50 text-indigo-600 rounded-2xl flex items-center justify-center text-3xl mx-auto mb-4">🏖️</div>
+        <h3 class="font-bold text-xl mb-2" data-i18n="pilar2-title">Entorno Privilegiado</h3>
+        <p class="text-gray-600 text-sm" data-i18n="pilar2-desc">Ubicado en la Costa Daurada. A 5 minutos de la playa y a solo 45 minutos de Barcelona.</p>
+      </div>
+
+      <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm text-center">
+        <div class="w-14 h-14 bg-indigo-50 text-indigo-600 rounded-2xl flex items-center justify-center text-3xl mx-auto mb-4">📱</div>
+        <h3 class="font-bold text-xl mb-2" data-i18n="pilar3-title">No te pierdas nada</h3>
+        <p class="text-gray-600 text-sm" data-i18n="pilar3-desc">Streaming en directo de todos los partidos y estadísticas en tiempo real vía App.</p>
+      </div>
+    </div>
+
+    <!-- Categorías -->
+    <div class="bg-slate-900 text-white rounded-3xl p-8 sm:p-12 mb-16">
+      <div class="text-center mb-8">
+        <h3 class="text-2xl sm:text-3xl font-extrabold mb-2" data-i18n="cat-title">Categorías y Cuadro de Competición</h3>
+        <p class="text-indigo-400 font-semibold" data-i18n="cat-sub">Mínimo 4 partidos garantizados por equipo (Subgrupos Oro/Plata)</p>
+      </div>
+      <div class="grid sm:grid-cols-3 gap-6 text-center">
+        <div class="bg-slate-800 p-6 rounded-xl border border-slate-700">
+          <span class="text-indigo-400 font-black text-3xl block mb-1">U14</span>
+          <h4 class="font-bold text-lg" data-i18n="cat-u14">INFANTIL</h4>
+          <p class="text-xs text-gray-400 mt-1">Masculino y Femenino</p>
+        </div>
+        <div class="bg-slate-800 p-6 rounded-xl border border-slate-700">
+          <span class="text-indigo-400 font-black text-3xl block mb-1">U16</span>
+          <h4 class="font-bold text-lg" data-i18n="cat-u16">CADETE</h4>
+          <p class="text-xs text-gray-400 mt-1">Masculino y Femenino</p>
+        </div>
+        <div class="bg-slate-800 p-6 rounded-xl border border-slate-700">
+          <span class="text-indigo-400 font-black text-3xl block mb-1">U18</span>
+          <h4 class="font-bold text-lg" data-i18n="cat-u18">JUNIOR</h4>
+          <p class="text-xs text-gray-400 mt-1">Masculino y Femenino</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modalidades de Inscripción y Precios -->
+    <div class="mb-16">
+      <div class="text-center mb-10">
+        <h3 class="text-3xl font-extrabold text-gray-900" data-i18n="mod-title">Modalidades de Participación</h3>
+        <p class="text-gray-500 mt-2 text-sm" data-i18n="mod-sub">Cuota de Inscripción por Equipo: 300 €</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- MODALIDAD A -->
+        <div class="bg-white rounded-2xl p-8 border-2 border-indigo-600 shadow-md flex flex-col justify-between relative">
+          <span class="absolute -top-3 right-6 bg-indigo-600 text-white text-xs font-bold uppercase px-3 py-1 rounded-full">Recomendado</span>
+          <div>
+            <!-- 📷 HUECO PARA FOTO HOTEL -->
+            <img src="foto-hotel.jpg" alt="Hotel 3 estrellas" class="w-full h-44 object-cover rounded-xl mb-6 bg-gray-200">
+            <h4 class="text-2xl font-extrabold text-gray-900 mb-2" data-i18n="modA-title">Modalidad A: Con Pernocta</h4>
+            <p class="text-gray-600 text-sm mb-6" data-i18n="modA-desc">Para equipos nacionales e internacionales que buscan la experiencia completa de concentración.</p>
+            <div class="mb-6 bg-indigo-50 p-4 rounded-xl border border-indigo-100">
+              <p class="text-xl font-extrabold text-indigo-900">280 € <span class="text-sm font-normal text-gray-600">/ participante (Hotel 3*)</span></p>
+              <p class="text-lg font-bold text-indigo-700">230 € <span class="text-sm font-normal text-gray-600">/ entrenador (Hotel 3*)</span></p>
+            </div>
+            <ul class="text-sm text-gray-600 space-y-2 mb-6">
+              <li>✅ 3 noches en hotel de costa (3*)</li>
+              <li>✅ Pensión completa: desayuno, almuerzo y cena</li>
+              <li>✅ Traslados internos a pabellones y alojamientos</li>
+              <li>✅ Welcome Pack oficial + premios 5 ideal y MVP</li>
+              <li>✅ Seguro deportivo completo</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- MODALIDAD B -->
+        <div class="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="w-full h-44 bg-slate-100 rounded-xl mb-6 flex items-center justify-center text-4xl">🏆</div>
+            <h4 class="text-2xl font-extrabold text-gray-900 mb-2" data-i18n="modB-title">Modalidad B: Sin Pernocta</h4>
+            <p class="text-gray-600 text-sm mb-6" data-i18n="modB-desc">Para equipos de la zona del Penedès, Garraf y alrededores.</p>
+            <div class="mb-6 bg-gray-50 p-4 rounded-xl border border-gray-200">
+              <p class="text-2xl font-extrabold text-gray-900">95 € <span class="text-sm font-normal text-gray-600">/ participante</span></p>
+            </div>
+            <ul class="text-sm text-gray-600 space-y-2 mb-6">
+              <li>✅ Participación y partidos garantizados</li>
+              <li>✅ Streaming y estadísticas en directo</li>
+              <li>✅ Welcome Pack oficial del torneo</li>
+              <li>✅ Seguro deportivo completo</li>
+              <li class="text-gray-400">ℹ️ Extra opcional: comida viernes/sábado y traslados</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Promociones Especiales -->
+      <div class="mt-8 bg-amber-50 border border-amber-200 rounded-2xl p-6 grid sm:grid-cols-2 gap-6">
+        <div>
+          <h5 class="font-bold text-amber-900 text-lg mb-1" data-i18n="promo1-title">🎁 Promoción 12+1 (Entrenadores)</h5>
+          <p class="text-sm text-amber-800" data-i18n="promo1-desc">Por cada 12 jugadores/as y 1 entrenador en modalidad con pernocta, **1 plaza de entrenador es 100% GRATUITA**.</p>
+        </div>
+        <div>
+          <h5 class="font-bold text-amber-900 text-lg mb-1" data-i18n="promo2-title">🏀 Descuento por Volumen (Grandes Clubes)</h5>
+          <p class="text-sm text-amber-800" data-i18n="promo2-desc">Si tu club inscribe 3 o más equipos, obtendrá **1 plaza de técnico 100% GRATUITA** en cada equipo.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cronograma del Torneo -->
+    <div class="bg-white rounded-3xl p-8 border border-gray-200 shadow-sm mb-16">
+      <h3 class="text-2xl font-bold text-center mb-8" data-i18n="crono-title">Cronograma del Torneo (Marzo 2027)</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-4 gap-4 text-center">
+        <div class="p-4 bg-slate-50 rounded-xl border border-gray-200">
+          <span class="bg-slate-900 text-white text-xs font-bold px-3 py-1 rounded-full uppercase">JUE 25</span>
+          <p class="text-sm font-semibold mt-3" data-i18n="crono-jue">Llegada, acreditaciones, check-in y primeros partidos por la tarde.</p>
+        </div>
+        <div class="p-4 bg-slate-50 rounded-xl border border-gray-200">
+          <span class="bg-slate-900 text-white text-xs font-bold px-3 py-1 rounded-full uppercase">VIE 26</span>
+          <p class="text-sm font-semibold mt-3" data-i18n="crono-vie">Jornada completa de Fase de Grupos (mañana y tarde).</p>
+        </div>
+        <div class="p-4 bg-slate-50 rounded-xl border border-gray-200">
+          <span class="bg-slate-900 text-white text-xs font-bold px-3 py-1 rounded-full uppercase">SÁB 27</span>
+          <p class="text-sm font-semibold mt-3" data-i18n="crono-sab">Fin de fase de grupos e inicio de eliminatorias.</p>
+        </div>
+        <div class="p-4 bg-indigo-50 border border-indigo-200 rounded-xl">
+          <span class="bg-indigo-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase">DOM 28</span>
+          <p class="text-sm font-semibold mt-3 text-indigo-950" data-i18n="crono-dom">Finales, Trofeos, MVP y ceremonia de clausura por la mañana.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Experiencias Extra -->
+    <div class="bg-slate-900 text-white rounded-3xl p-8 sm:p-12">
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+        <div>
+          <h3 class="text-3xl font-extrabold mb-4" data-i18n="exp-title">Mucho más que Baloncesto</h3>
+          <p class="text-gray-300 text-sm leading-relaxed mb-4" data-i18n="exp-desc1">
+            <strong>Entrenamientos Pre y Post Torneo:</strong> Podéis reservar la pista oficial de OSE Barcelona Basketball para preparar al equipo antes del torneo o estirar la estancia.
+          </p>
+          <p class="text-gray-300 text-sm leading-relaxed mb-6" data-i18n="exp-desc2">
+            <strong>Excursiones y Tours:</strong> Visita a la Sagrada Família & Barcelona, día completo en PortAventura World (a solo 35 min) o Tour por Tarragona Romana.
+          </p>
+        </div>
+        <div>
+          <!-- 📷 HUECO PARA FOTO EXCURSIONES -->
+          <img src="foto-excursiones.jpg" alt="Excursiones en Barcelona y PortAventura" class="w-full h-64 object-cover rounded-2xl bg-slate-800">
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ==================== SECCIÓN: SEDES ==================== -->
+  <section id="sedes" class="py-16 bg-slate-100 border-y border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-extrabold text-gray-900" data-i18n="sedes-title">Instalaciones Deportivas</h2>
+        <p class="text-gray-500 mt-2 text-sm" data-i18n="sedes-sub">Cunit & Cubelles | Pistas oficiales de primer nivel</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- SEDE 1 -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-200 flex flex-col justify-between">
+          <!-- 📷 HUECO PARA FOTO CEM ELS JONCS -->
+          <img src="foto-cem-els-joncs.jpg" alt="CEM Els Joncs Cunit" class="w-full h-48 object-cover bg-gray-200">
+          <div class="p-6">
+            <span class="bg-indigo-100 text-indigo-800 text-xs font-bold px-2 py-1 rounded mb-2 inline-block">Cunit</span>
+            <h3 class="text-xl font-bold mb-2">CEM Els Joncs</h3>
+            <p class="text-gray-600 text-sm mb-4">Pabellón multideportivo con excelentes instalaciones y vestuarios.</p>
+          </div>
+        </div>
+
+        <!-- SEDE 2 -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-200 flex flex-col justify-between">
+          <!-- 📷 HUECO PARA FOTO PABELLON CUBELLES -->
+          <img src="foto-pabellon-cubelles.jpg" alt="Pabellón Municipal Cubelles" class="w-full h-48 object-cover bg-gray-200">
+          <div class="p-6">
+            <span class="bg-indigo-100 text-indigo-800 text-xs font-bold px-2 py-1 rounded mb-2 inline-block">Cubelles</span>
+            <h3 class="text-xl font-bold mb-2">Pabellón Municipal Cubelles</h3>
+            <p class="text-gray-600 text-sm mb-4">Pista de parquet de alta calidad equipada para grandes competiciones.</p>
+          </div>
+        </div>
+
+        <!-- SEDE 3 -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-200 flex flex-col justify-between">
+          <!-- 📷 HUECO PARA FOTO POMPEU FABRA -->
+          <img src="foto-pompeu-fabra.jpg" alt="Pista Pompeu Fabra" class="w-full h-48 object-cover bg-gray-200">
+          <div class="p-6">
+            <span class="bg-indigo-100 text-indigo-800 text-xs font-bold px-2 py-1 rounded mb-2 inline-block">Cunit</span>
+            <h3 class="text-xl font-bold mb-2">Pista Pompeu Fabra</h3>
+            <p class="text-gray-600 text-sm mb-4">Instalación auxiliar perfectamente habilitada para partidos de fase de grupos.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SECCIÓN: INSCRIBIRSE ==================== -->
+  <section id="inscripcion" class="py-16 bg-white">
+    <div class="max-w-3xl mx-auto px-4">
+      
+      <!-- Pasos y Plazos de Pago -->
+      <div class="mb-12 bg-indigo-50 border border-indigo-200 p-6 rounded-2xl">
+        <h3 class="text-xl font-bold text-indigo-950 mb-3" data-i18n="pasos-title">Proceso de Inscripción y Plazos de Pago</h3>
+        <ol class="text-sm text-indigo-900 space-y-2 mb-4">
+          <li><strong>1. Formulario:</strong> Rellena la solicitud a continuación.</li>
+          <li><strong>2. Confirmación y Cuota:</strong> Tras revisar tu solicitud, recibirás las instrucciones para abonar los 300 € de cuota de equipo (reserva de plaza).</li>
+          <li><strong>3. Plazos por Participante:</strong> 
+            <ul class="ml-4 mt-1 space-y-1">
+              <li>🔹 <strong>50% del total:</strong> Antes del 1 de enero de 2027.</li>
+              <li>🔹 <strong>50% restante:</strong> Antes del 2 de febrero de 2027.</li>
+            </ul>
+          </li>
+        </ol>
+      </div>
+
+      <div class="text-center mb-8">
+        <h3 class="text-3xl font-bold" data-i18n="form-title">Formulario Oficial de Registro</h3>
+        <p class="text-gray-500 mt-2" data-i18n="form-subtitle">Completa los datos de tu club para solicitar la plaza en el torneo 2027.</p>
+      </div>
+
+      <!-- Formulario interactivo conectado a Google Sheets -->
       <form id="form-torneo" class="space-y-6 bg-slate-50 p-6 sm:p-8 rounded-2xl border border-gray-200 shadow-sm">
         
         <!-- Club / Academia -->
@@ -58,12 +306,12 @@
           <label class="block text-sm font-semibold mb-2" data-i18n="label-categoria">Categoría del Equipo *</label>
           <select id="categoria" required class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:outline-none bg-white">
             <option value="" data-i18n="opt-select">Selecciona una categoría</option>
-            <option value="U14 Masculino">U14 Masculino / Male</option>
-            <option value="U14 Femenino">U14 Femenino / Female</option>
-            <option value="U16 Masculino">U16 Masculino / Male</option>
-            <option value="U16 Femenino">U16 Femenino / Female</option>
-            <option value="U18 Masculino">U18 Masculino / Male</option>
-            <option value="U18 Femenino">U18 Femenino / Female</option>
+            <option value="U14 Masculino">U14 Masculino (Infantil)</option>
+            <option value="U14 Femenino">U14 Femenino (Infantil)</option>
+            <option value="U16 Masculino">U16 Masculino (Cadete)</option>
+            <option value="U16 Femenino">U16 Femenino (Cadete)</option>
+            <option value="U18 Masculino">U18 Masculino (Junior)</option>
+            <option value="U18 Femenino">U18 Femenino (Junior)</option>
           </select>
         </div>
 
@@ -75,9 +323,9 @@
 
         <!-- Grabación de Partido -->
         <div>
-          <label class="block text-sm font-semibold mb-2" data-i18n="label-video">Grabación de partido (Adjuntar link) *</label>
+          <label class="block text-sm font-semibold mb-2" data-i18n="label-video">Grabación de partido (Link) *</label>
           <input type="url" id="videoUrl" required placeholder="https://youtube.com/watch?v=... o VEO/Drive" class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:outline-none">
-          <p class="text-xs text-gray-500 mt-1" data-i18n="video-help">Enlace a YouTube, Vimeo, Veo o Google Drive con acceso público.</p>
+          <p class="text-xs text-gray-500 mt-1" data-i18n="video-help">Enlace a YouTube, Vimeo, Veo o Google Drive (acceso público).</p>
         </div>
 
         <!-- ¿Más equipos? -->
@@ -109,40 +357,144 @@
         </div>
 
         <!-- Botón Enviar -->
-        <button type="submit" id="btn-submit" class="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-3.5 rounded-lg shadow-md transition text-lg mt-4" data-i18n="btn-submit">
+        <button type="submit" id="btn-submit" class="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-3.5 rounded-lg shadow-md transition text-lg mt-4 cursor-pointer" data-i18n="btn-submit">
           Enviar Inscripción
         </button>
 
         <!-- Estado de envío -->
         <p id="mensaje-estado" class="text-center text-sm font-semibold hidden"></p>
       </form>
+
     </div>
   </section>
 
-  <!-- Lógica en JavaScript -->
+  <!-- ==================== SECCIÓN: CONTACTO ==================== -->
+  <section id="contacto" class="py-16 bg-slate-900 text-white border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        
+        <!-- Canales Oficiales -->
+        <div>
+          <h2 class="text-3xl font-extrabold mb-4" data-i18n="contact-title">Contacto y Atención Directa</h2>
+          <p class="text-gray-300 text-sm mb-6" data-i18n="contact-desc">
+            Si tenéis cualquier duda sobre el proceso de registro, la logística del transporte o queréis ampliar información sobre los servicios del torneo, poneros en contacto con nosotros:
+          </p>
+          
+          <ul class="space-y-4 text-sm">
+            <li class="flex items-center space-x-3">
+              <span class="text-indigo-400 text-xl">📞</span>
+              <div>
+                <p class="font-bold">Teléfono / WhatsApp de atención</p>
+                <p class="text-gray-300">+34 620 073 334 / +34 676 886 095</p>
+              </div>
+            </li>
+            <li class="flex items-center space-x-3">
+              <span class="text-indigo-400 text-xl">✉️</span>
+              <div>
+                <p class="font-bold">Correo electrónico</p>
+                <p class="text-gray-300">penedes.maritim.basketball@gmail.com</p>
+              </div>
+            </li>
+            <li class="flex items-center space-x-3">
+              <span class="text-indigo-400 text-xl">📸</span>
+              <div>
+                <p class="font-bold">Instagram Oficial</p>
+                <p class="text-gray-300">@penedesmaritimbasketballcup / @penedesmaritimbasketball</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Alojamiento para Aficionados -->
+        <div class="bg-slate-800 p-8 rounded-3xl border border-slate-700">
+          <h3 class="text-xl font-bold text-amber-400 mb-2" data-i18n="afic-title">Alojamiento para Aficionados</h3>
+          <p class="text-gray-300 text-sm leading-relaxed mb-4" data-i18n="afic-desc">
+            ¡Queremos que la familia y la afición vivan el torneo desde dentro! Disponemos de **Packs Exclusivos de Alojamiento** para acompañantes con tarifas adaptadas y ubicaciones cercanas a los pabellones.
+          </p>
+          <p class="text-xs text-gray-400 mb-4" data-i18n="afic-sub">
+            Debido a la alta demanda durante las fechas del torneo, la gestión se realiza de forma directa y personalizada.
+          </p>
+          <a href="https://wa.me/34620073334" target="_blank" class="inline-block bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold px-6 py-3 rounded-xl text-sm transition">
+            💬 Consultar Packs Afición por WhatsApp (+34 620 073 334)
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="bg-slate-950 text-gray-500 py-8 text-center text-xs border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4">
+      <!-- 📷 HUECO PARA LOGO EN FOOTER -->
+      <img src="PenedesMaritimCuplogo.png" alt="Logo" class="h-8 w-auto mx-auto mb-3">
+      <p class="text-gray-400 font-semibold mb-1">PENEDÈS MARÍTIM BASKETBALL CUP 2027</p>
+      <p>© 2027 Cunit & Cubelles (Costa Daurada / Garraf). Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- ==================== LÓGICA JAVASCRIPT & IDIOMAS ==================== -->
   <script>
-    // ⚠️ REEMPLAZA ESTA VARIABLE CON LA URL OBTENIDA EN EL PASO 1
     const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbx07-n5wnVR0WVmnLpLGRkwvxgWlk5knOAHdvMcGVrGKrR572jHiaIO5St_T-NSpMwJOg/exec';
 
     let idiomaActual = 'es';
 
-    // Diccionario bilingüe
+    // DICCIONARIO COMPLETO BILINGÜE
     const i18n = {
       es: {
-        'nav-info': 'Información',
-        'nav-register': 'Inscribirse',
-        'hero-tag': 'Torneo Internacional',
-        'hero-title': 'Inscripción Oficial de Equipos',
-        'hero-subtitle': 'Completa el formulario para solicitar la participación de tu club o academia.',
-        'hero-btn': 'Ir al Formulario',
-        'form-title': 'Formulario de Registro',
-        'form-subtitle': 'Por favor, rellena todos los campos para que la organización revise tu solicitud.',
+        'nav-inicio': 'Inicio',
+        'nav-torneo2027': 'Torneo',
+        'nav-sedes': 'Sedes',
+        'nav-inscripcion': 'Inscribirse',
+        'nav-contacto': 'Contacto',
+        'hero-dates': 'Semana Santa 2027 | Del 25 al 28 de Marzo de 2027',
+        'hero-title': 'PENEDÈS MARÍTIM BASKETBALL CUP',
+        'hero-location': 'Cunit & Cubelles | Costa Daurada / Garraf',
+        'hero-org': 'Organizado por JOSE BARCELONA A.B., C.B. CUNIT y C.B. CUBELLES',
+        'hero-btn-reg': 'Inscribir Equipo',
+        'hero-btn-more': 'Ver Detalles del Torneo',
+        'torneo-intro-title': 'Bienvenidos al Penedès Marítim Cup',
+        'torneo-intro-desc': 'Nace con la misión de ofrecer una experiencia inolvidable donde el baloncesto de calidad, el entorno marítimo y la convivencia se unen en cuatro días de pura pasión deportiva.',
+        'pilar1-title': 'Baloncesto Formativo',
+        'pilar1-desc': 'Equipos internacionales de diferentes países y niveles competicionales.',
+        'pilar2-title': 'Entorno Privilegiado',
+        'pilar2-desc': 'Ubicado en la Costa Daurada. A 5 minutos de la playa y a solo 45 minutos de Barcelona.',
+        'pilar3-title': 'No te pierdas nada',
+        'pilar3-desc': 'Streaming en directo de todos los partidos y estadísticas en tiempo real vía App.',
+        'cat-title': 'Categorías y Cuadro de Competición',
+        'cat-sub': 'Mínimo 4 partidos garantizados por equipo (Subgrupos Oro/Plata)',
+        'cat-u14': 'INFANTIL (U14)',
+        'cat-u16': 'CADETE (U16)',
+        'cat-u18': 'JUNIOR (U18)',
+        'mod-title': 'Modalidades de Participación',
+        'mod-sub': 'Cuota de Inscripción por Equipo: 300 €',
+        'modA-title': 'Modalidad A: Con Pernocta',
+        'modA-desc': 'Para equipos nacionales e internacionales que buscan la experiencia completa de concentración.',
+        'modB-title': 'Modalidad B: Sin Pernocta',
+        'modB-desc': 'Para equipos de la zona del Penedès, Garraf y alrededores.',
+        'promo1-title': '🎁 Promoción 12+1 (Entrenadores)',
+        'promo1-desc': 'Por cada 12 jugadores/as y 1 entrenador en modalidad con pernocta, 1 plaza de entrenador es 100% GRATUITA.',
+        'promo2-title': '🏀 Descuento por Volumen (Grandes Clubes)',
+        'promo2-desc': 'Si tu club inscribe 3 o más equipos, obtendrá 1 plaza de técnico 100% GRATUITA en cada equipo.',
+        'crono-title': 'Cronograma del Torneo (Marzo 2027)',
+        'crono-jue': 'Llegada, acreditaciones, check-in y primeros partidos por la tarde.',
+        'crono-vie': 'Jornada completa de Fase de Grupos (mañana y tarde).',
+        'crono-sab': 'Fin de fase de grupos e inicio de eliminatorias.',
+        'crono-dom': 'Finales, Trofeos, MVP y ceremonia de clausura por la mañana.',
+        'exp-title': 'Mucho más que Baloncesto',
+        'exp-desc1': 'Entrenamientos Pre y Post Torneo: Podéis reservar la pista oficial de OSE Barcelona Basketball para preparar al equipo antes del torneo o estirar la estancia.',
+        'exp-desc2': 'Excursiones y Tours: Visita a la Sagrada Família & Barcelona, día completo en PortAventura World (a solo 35 min) o Tour por Tarragona Romana.',
+        'sedes-title': 'Instalaciones Deportivas',
+        'sedes-sub': 'Cunit & Cubelles | Pistas oficiales de primer nivel',
+        'pasos-title': 'Proceso de Inscripción y Plazos de Pago',
+        'form-title': 'Formulario Oficial de Registro',
+        'form-subtitle': 'Completa los datos de tu club para solicitar la plaza en el torneo 2027.',
         'label-club': 'Nombre del Club o Academia *',
         'label-categoria': 'Categoría del Equipo *',
         'opt-select': 'Selecciona una categoría',
         'label-nivel': 'Nivel competitivo o Liga en la que compiten *',
-        'label-video': 'Grabación de partido (Adjuntar link) *',
-        'video-help': 'Enlace a YouTube, Vimeo, Veo o Google Drive con acceso público.',
+        'label-video': 'Grabación de partido (Link) *',
+        'video-help': 'Enlace a YouTube, Vimeo, Veo o Google Drive (acceso público).',
         'label-masequipos': '¿Estáis interesados en inscribir más equipos del mismo club? *',
         'opt-yes': 'Sí',
         'opt-no': 'No',
@@ -152,24 +504,68 @@
         'btn-submit': 'Enviar Inscripción',
         'msg-sending': 'Enviando...',
         'msg-success': '✅ ¡Solicitud enviada con éxito! Nos pondremos en contacto pronto.',
-        'msg-error': '❌ Error al enviar. Revisa los datos e inténtalo de nuevo.'
+        'msg-error': '❌ Error al enviar. Revisa los datos e inténtalo de nuevo.',
+        'contact-title': 'Contacto y Atención Directa',
+        'contact-desc': 'Si tenéis cualquier duda sobre el proceso de registro, la logística del transporte o queréis ampliar información sobre los servicios del torneo, poneros en contacto con nosotros:',
+        'afic-title': 'Alojamiento para Aficionados',
+        'afic-desc': '¡Queremos que la familia y la afición vivan el torneo desde dentro! Disponemos de Packs Exclusivos de Alojamiento para acompañantes con tarifas adaptadas y ubicaciones cercanas a los pabellones.',
+        'afic-sub': 'Debido a la alta demanda durante las fechas del torneo, la gestión se realiza de forma directa y personalizada.'
       },
       en: {
-        'nav-info': 'Information',
-        'nav-register': 'Register',
-        'hero-tag': 'International Tournament',
-        'hero-title': 'Official Team Registration',
-        'hero-subtitle': 'Complete the form to apply for your club or academy participation.',
-        'hero-btn': 'Go to Form',
-        'form-title': 'Registration Form',
-        'form-subtitle': 'Please fill out all fields for the committee to review your application.',
+        'nav-inicio': 'Home',
+        'nav-torneo2027': 'Tournament',
+        'nav-sedes': 'Venues',
+        'nav-inscripcion': 'Register',
+        'nav-contacto': 'Contact',
+        'hero-dates': 'Easter 2027 | March 25th to 28th, 2027',
+        'hero-title': 'PENEDÈS MARÍTIM BASKETBALL CUP',
+        'hero-location': 'Cunit & Cubelles | Costa Daurada / Garraf',
+        'hero-org': 'Organized by JOSE BARCELONA A.B., C.B. CUNIT & C.B. CUBELLES',
+        'hero-btn-reg': 'Register Team',
+        'hero-btn-more': 'Tournament Details',
+        'torneo-intro-title': 'Welcome to Penedès Marítim Cup',
+        'torneo-intro-desc': 'Created to offer an unforgettable experience where quality basketball, maritime surroundings, and friendship unite in 4 days of pure passion.',
+        'pilar1-title': 'Youth Basketball',
+        'pilar1-desc': 'International teams from different countries and competitive levels.',
+        'pilar2-title': 'Prime Location',
+        'pilar2-desc': 'Located in Costa Daurada. 5 minutes from the beach and 45 minutes from Barcelona.',
+        'pilar3-title': 'Live Coverage',
+        'pilar3-desc': 'Live streaming for all games and real-time app stats.',
+        'cat-title': 'Categories & Tournament System',
+        'cat-sub': 'Minimum 4 guaranteed games per team (Gold/Silver divisions)',
+        'cat-u14': 'U14 (Infantil)',
+        'cat-u16': 'U16 (Cadete)',
+        'cat-u18': 'U18 (Junior)',
+        'mod-title': 'Registration Options',
+        'mod-sub': 'Team Registration Fee: 300 €',
+        'modA-title': 'Option A: With Accommodation',
+        'modA-desc': 'For national and international teams looking for a full camp experience.',
+        'modB-title': 'Option B: Without Accommodation',
+        'modB-desc': 'For local teams in Penedès, Garraf, and nearby areas.',
+        'promo1-title': '🎁 12+1 Promotion (Coaches)',
+        'promo1-desc': 'For every 12 players and 1 coach in the accommodation option, 1 coach stays 100% FREE.',
+        'promo2-title': '🏀 Volume Discount (Clubs)',
+        'promo2-desc': 'If your club registers 3 or more teams, get 1 FREE coach spot for each team.',
+        'crono-title': 'Schedule (March 2027)',
+        'crono-jue': 'Arrival, check-in, and first games in the afternoon.',
+        'crono-vie': 'Full Group Stage games (morning and afternoon).',
+        'crono-sab': 'End of Group Stage and start of Playoffs.',
+        'crono-dom': 'Finals, Trophies, MVP awards and closing ceremony.',
+        'exp-title': 'Much More Than Basketball',
+        'exp-desc1': 'Pre & Post Tournament Training: Book the official OSE Barcelona Basketball court for pre-tournament practice or extended stays.',
+        'exp-desc2': 'Tours & Excursions: Visit Sagrada Família & Barcelona, full day at PortAventura World (35 min away), or Roman Tarragona tour.',
+        'sedes-title': 'Sports Facilities',
+        'sedes-sub': 'Cunit & Cubelles | Top level official basketball arenas',
+        'pasos-title': 'Registration Process & Payment Deadlines',
+        'form-title': 'Official Registration Form',
+        'form-subtitle': 'Fill in your club details to apply for the 2027 tournament.',
         'label-club': 'Club or Academy Name *',
         'label-categoria': 'Team Category *',
         'opt-select': 'Select a category',
         'label-nivel': 'Competitive level or League *',
-        'label-video': 'Match Recording (Paste Link) *',
+        'label-video': 'Match Recording Link *',
         'video-help': 'Link to YouTube, Vimeo, Veo or Google Drive (public access).',
-        'label-masequipos': 'Are you interested in enrolling more teams from the same club? *',
+        'label-masequipos': 'Interested in registering more teams from the same club? *',
         'opt-yes': 'Yes',
         'opt-no': 'No',
         'label-contacto': 'Club Contact Person *',
@@ -178,7 +574,12 @@
         'btn-submit': 'Submit Application',
         'msg-sending': 'Sending...',
         'msg-success': '✅ Application submitted successfully! We will contact you soon.',
-        'msg-error': '❌ Error sending application. Please check the data and try again.'
+        'msg-error': '❌ Error sending application. Please check the data and try again.',
+        'contact-title': 'Contact & Support',
+        'contact-desc': 'If you have any questions regarding registration, transport logistics, or tournament services, contact our team:',
+        'afic-title': 'Fan & Family Accommodation',
+        'afic-desc': 'We want families and supporters to live the tournament from the inside! We offer Exclusive Accommodation Packs with special rates near the sports venues.',
+        'afic-sub': 'Due to high demand during tournament dates, booking is handled directly and individually.'
       }
     };
 
