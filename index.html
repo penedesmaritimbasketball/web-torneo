@@ -14,7 +14,7 @@
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- CONFIGURACIÓN DE COLORES Y TIPOGRAFÍA -->
+  <!-- CONFIGURACIÓN DE COLORES PERSONALIZADOS -->
   <script>
     tailwind.config = {
       theme: {
@@ -25,7 +25,7 @@
           colors: {
             marca: {
               principal: '#173A7D',
-              hover: '#F36B21',
+              secundario: '#F36B21',
               oscuro: '#061B36',
               acento: '#FFC928',
             }
@@ -35,50 +35,50 @@
     }
   </script>
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans antialiased selection:bg-indigo-500 selection:text-white">
+<body class="bg-gray-50 text-gray-800 font-sans antialiased selection:bg-marca-secundario selection:text-white">
 
   <!-- ==================== NAVEGACIÓN ==================== -->
-  <nav class="bg-slate-900 text-white sticky top-0 z-50 shadow-md backdrop-blur-md bg-opacity-95 border-b border-slate-800">
+  <nav class="bg-marca-oscuro text-white sticky top-0 z-50 shadow-md backdrop-blur-md bg-opacity-95 border-b border-slate-800">
     <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
       <a href="index.html" class="flex items-center space-x-3">
         <img src="PenedesMaritimCuplogo.png" alt="Logo Penedès Marítim" class="h-10 w-auto">
-        <span class="text-lg font-black tracking-wider text-indigo-400 hidden sm:inline">PENEDÈS MARÍTIM BASKETBALL CUP</span>
+        <span class="text-lg font-black tracking-wider text-marca-acento hidden sm:inline">PENEDÈS MARÍTIM CUP</span>
       </a>
 
       <!-- Menú multi-página -->
       <div class="flex items-center space-x-4 md:space-x-6 text-sm font-medium">
-        <a href="index.html" class="text-indigo-400 font-bold border-b-2 border-indigo-400 pb-0.5">Inicio</a>
-        <a href="torneo2027/torneo2027.html" class="hover:text-indigo-400 transition">Torneo 2027</a>
-        <a href="sedes/sedes.html" class="hover:text-indigo-400 transition">Sedes</a>
-        <a href="inscripcion/inscripcion.html" class="bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-2 rounded-lg transition font-semibold shadow-md">Inscribirse</a>
-        <a href="contacto/contacto.html" class="hover:text-indigo-400 transition">Contacto</a>
+        <a href="index.html" class="text-marca-secundario font-bold border-b-2 border-marca-secundario pb-0.5">Inicio</a>
+        <a href="torneo2027.html" class="hover:text-marca-acento transition">Torneo</a>
+        <a href="sedes.html" class="hover:text-marca-acento transition">Sedes</a>
+        <a href="inscripcion.html" class="bg-marca-secundario hover:bg-opacity-90 text-white px-4 py-2 rounded-lg transition font-semibold shadow-md">Inscribirse</a>
+        <a href="contacto.html" class="hover:text-marca-acento transition">Contacto</a>
       </div>
     </div>
   </nav>
 
   <!-- ==================== HERO PRINCIPAL ==================== -->
-  <header class="relative bg-slate-900 text-white py-20 lg:py-32 px-4 overflow-hidden border-b border-slate-800">
-    <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#4f46e5_1px,transparent_1px)] [background-size:16px_16px]"></div>
+  <header class="relative bg-marca-oscuro text-white py-20 lg:py-32 px-4 overflow-hidden border-b border-slate-800">
+    <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#F36B21_1px,transparent_1px)] [background-size:16px_16px]"></div>
     
     <div class="relative max-w-5xl mx-auto text-center space-y-6">
-      <span class="inline-block bg-indigo-500/10 text-indigo-400 font-bold px-4 py-1.5 rounded-full text-xs sm:text-sm uppercase tracking-widest border border-indigo-500/20">
-        Edición 2027 · A. B. Cunit & OSE Barcelona & C. B. Cubelles
+      <span class="inline-block bg-marca-secundario/20 text-marca-acento font-bold px-4 py-1.5 rounded-full text-xs sm:text-sm uppercase tracking-widest border border-marca-acento/30">
+        Edición 2027 · A. B.Cunit & OSE Barcelona & C. B. Cubelles
       </span>
       
       <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight leading-tight">
         PENEDÈS MARÍTIM <br>
-        <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-amber-400">BASKETBALL CUP</span>
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-marca-acento to-marca-secundario">BASKETBALL CUP</span>
       </h1>
       
       <p class="text-gray-300 text-base sm:text-xl max-w-2xl mx-auto font-normal">
-        Vive la experiencia del baloncesto formativo en la Costa Daurada y Garraf. Del 25 al 28 de Marzo de 2027.
+        Vive la experiencia del baloncesto formativo en la Costa Daurada y Garraf. Del 25 al 28 de Marzo de 2027[cite: 2].
       </p>
       
       <div class="pt-4 flex flex-col sm:flex-row justify-center gap-4">
-        <a href="inscripcion/inscripcion.html" class="bg-indigo-600 hover:bg-indigo-500 text-white font-bold px-8 py-4 rounded-xl text-base transition shadow-lg shadow-indigo-600/30">
+        <a href="inscripcion.html" class="bg-marca-secundario hover:bg-opacity-90 text-white font-bold px-8 py-4 rounded-xl text-base transition shadow-lg shadow-marca-secundario/30">
           Inscribir mi Equipo
         </a>
-        <a href="torneo2027/torneo2027.html" class="bg-slate-800 hover:bg-slate-700 text-gray-200 border border-slate-700 font-bold px-8 py-4 rounded-xl text-base transition">
+        <a href="torneo2027.html" class="bg-marca-principal hover:bg-opacity-90 text-white border border-slate-700 font-bold px-8 py-4 rounded-xl text-base transition">
           Ver Detalles del Torneo
         </a>
       </div>
@@ -91,47 +91,47 @@
       
       <div class="bg-white p-8 rounded-3xl border border-gray-200 shadow-sm hover:shadow-md transition">
         <div class="text-3xl mb-4">🏀</div>
-        <h3 class="text-xl font-bold mb-2 text-slate-900">Mínimo 4 Partidos</h3>
+        <h3 class="text-xl font-bold mb-2 text-marca-oscuro">Mínimo 4 Partidos</h3>
         <p class="text-gray-600 text-sm leading-relaxed mb-4">
           Garantizamos máxima competición para todas las categorías (U14, U16 y U18) en masculino y femenino[cite: 2].
         </p>
-        <a href="torneo2027/torneo2027.html" class="text-indigo-600 font-bold text-sm hover:underline">Ver formato →</a>
+        <a href="torneo2027.html" class="text-marca-secundario font-bold text-sm hover:underline">Ver formato →</a>
       </div>
 
       <div class="bg-white p-8 rounded-3xl border border-gray-200 shadow-sm hover:shadow-md transition">
         <div class="text-3xl mb-4">📍</div>
-        <h3 class="text-xl font-bold mb-2 text-slate-900">Sedes Top en Cunit y Cubelles</h3>
+        <h3 class="text-xl font-bold mb-2 text-marca-oscuro">Sedes Top en Cunit y Cubelles</h3>
         <p class="text-gray-600 text-sm leading-relaxed mb-4">
           Pabellones de primer nivel a escasos minutos de la playa y perfectamente conectados.
         </p>
-        <a href="sedes/sedes.html" class="text-indigo-600 font-bold text-sm hover:underline">Descubrir sedes →</a>
+        <a href="sedes.html" class="text-marca-secundario font-bold text-sm hover:underline">Descubrir sedes →</a>
       </div>
 
       <div class="bg-white p-8 rounded-3xl border border-gray-200 shadow-sm hover:shadow-md transition">
         <div class="text-3xl mb-4">🏨</div>
-        <h3 class="text-xl font-bold mb-2 text-slate-900">Alojamiento y Familias</h3>
+        <h3 class="text-xl font-bold mb-2 text-marca-oscuro">Alojamiento y Familias</h3>
         <p class="text-gray-600 text-sm leading-relaxed mb-4">
           Packs completos con pensión para equipos y tarifas adaptadas para acompañantes y afición.
         </p>
-        <a href="contacto/contacto.html" class="text-indigo-600 font-bold text-sm hover:underline">Consultar packs →</a>
+        <a href="contacto.html" class="text-marca-secundario font-bold text-sm hover:underline">Consultar packs →</a>
       </div>
 
     </div>
   </section>
 
-  <!-- ==================== ACCESO DIRECTO A OTRAS PÁGINAS ==================== -->
+  <!-- ==================== ACCESO DIRECTO ==================== -->
   <section class="bg-slate-100 py-16 border-y border-gray-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-3xl font-extrabold text-slate-900 mb-4">¿Todo listo para participar?</h2>
+      <h2 class="text-3xl font-extrabold text-marca-oscuro mb-4">¿Todo listo para participar?</h2>
       <p class="text-gray-600 text-base max-w-xl mx-auto mb-8">
         Consulta el calendario de inscripción o ponte en contacto directo con la organización para resolver tus dudas.
       </p>
       
       <div class="flex justify-center gap-4 flex-wrap">
-        <a href="inscripcion/inscripcion.html" class="bg-indigo-600 hover:bg-indigo-500 text-white font-bold px-6 py-3 rounded-xl transition text-sm">
+        <a href="inscripcion.html" class="bg-marca-secundario hover:bg-opacity-90 text-white font-bold px-6 py-3 rounded-xl transition text-sm">
           Ir al Formulario de Registro
         </a>
-        <a href="contacto/contacto.html" class="bg-white hover:bg-gray-50 text-slate-800 border border-gray-300 font-bold px-6 py-3 rounded-xl transition text-sm">
+        <a href="contacto.html" class="bg-white hover:bg-gray-50 text-marca-oscuro border border-gray-300 font-bold px-6 py-3 rounded-xl transition text-sm">
           Ver Preguntas Frecuentes (FAQ)
         </a>
       </div>
@@ -139,7 +139,7 @@
   </section>
 
   <!-- ==================== SECCIÓN DE CONTACTO GLOBAL ==================== -->
-  <section id="contacto" class="py-16 bg-slate-900 text-white border-t border-slate-800">
+  <section id="contacto" class="py-16 bg-marca-oscuro text-white border-t border-slate-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid md:grid-cols-2 gap-12 items-center">
         
@@ -151,38 +151,38 @@
           
           <ul class="space-y-4 text-sm">
             <li class="flex items-center space-x-3">
-              <span class="text-indigo-400 text-xl">📞</span>
+              <span class="text-marca-acento text-xl">📞</span>
               <div>
                 <p class="font-bold">Teléfono / WhatsApp de atención</p>
                 <p class="text-gray-300">+34 620 073 334 / +34 676 886 095</p>
               </div>
             </li>
             <li class="flex items-center space-x-3">
-              <span class="text-indigo-400 text-xl">✉️</span>
+              <span class="text-marca-acento text-xl">✉️</span>
               <div>
                 <p class="font-bold">Correo electrónico</p>
                 <p class="text-gray-300">penedes.maritim.basketball@gmail.com</p>
               </div>
             </li>
             <li class="flex items-center space-x-3">
-              <span class="text-indigo-400 text-xl">📸</span>
+              <span class="text-marca-acento text-xl">📸</span>
               <div>
                 <p class="font-bold">Instagram Oficial</p>
-                <p class="text-gray-300">@penedesmaritimbasketball</p>
+                <p class="text-gray-300">@penedesmaritimbasketballcup / @penedesmaritimbasketball</p>
               </div>
             </li>
           </ul>
         </div>
 
-        <div class="bg-slate-800 p-8 rounded-3xl border border-slate-700">
-          <h3 class="text-xl font-bold text-amber-400 mb-2">Alojamiento para Aficionados</h3>
+        <div class="bg-marca-principal/40 p-8 rounded-3xl border border-marca-acento/30">
+          <h3 class="text-xl font-bold text-marca-acento mb-2">Alojamiento para Aficionados</h3>
           <p class="text-gray-300 text-sm leading-relaxed mb-4">
             ¡Queremos que la familia y la afición vivan el torneo desde dentro! Disponemos de <strong>Packs Exclusivos de Alojamiento</strong> para acompañantes con tarifas adaptadas.
           </p>
           <p class="text-xs text-gray-400 mb-4">
             Debido a la alta demanda durante las fechas del torneo, la gestión se realiza de forma directa.
           </p>
-          <a href="https://wa.me/34620073334" target="_blank" class="inline-block bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold px-6 py-3 rounded-xl text-sm transition">
+          <a href="https://wa.me/34620073334" target="_blank" class="inline-block bg-marca-secundario hover:bg-opacity-90 text-white font-bold px-6 py-3 rounded-xl text-sm transition">
             💬 Consultar Packs Afición por WhatsApp (+34 620 073 334)
           </a>
         </div>
@@ -196,7 +196,7 @@
     <div class="max-w-7xl mx-auto px-4">
       <img src="PenedesMaritimCuplogo.png" alt="Logo Penedès Marítim Cup" class="h-8 w-auto mx-auto mb-3">
       <p class="text-gray-400 font-semibold mb-1">PENEDÈS MARÍTIM BASKETBALL CUP 2027</p>
-      <p>© 2027 A. B. Cunit & OSE Barcelona & C. B. Cubelles. Todos los derechos reservados.</p>
+      <p>© 2027 A. B.Cunit & OSE Barcelona & C. B. Cubelles. Todos los derechos reservados.</p>
     </div>
   </footer>
 
