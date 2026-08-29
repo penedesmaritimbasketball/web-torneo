@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>El Torneo - Penedès Marítim Basketball Cup 2027</title>
+  <link rel="icon" type="image/svg+xml" href="/PenedesMaritimCuplogo.svg">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Montserrat', 'sans-serif'] },
+          colors: {
+            marca: {
+              principal: '#173A7D',
+              secundario: '#F36B21',
+              oscuro: '#061B36',
+              acento: '#FFC928',
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased selection:bg-marca-secundario selection:text-white">
+
+  <!-- NAVEGACIÓN -->
+  <nav class="bg-marca-oscuro text-white sticky top-0 z-50 shadow-md backdrop-blur-md bg-opacity-95 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+      <a href="/" class="flex items-center space-x-3">
+        <img src="/PenedesMaritimCuplogo.svg" alt="Logo Penedès Marítim Cup" class="h-10 w-auto">
+        <span class="text-lg font-black tracking-wider text-marca-acento hidden sm:inline">PENEDÈS MARÍTIM BASKETBALL CUP</span>
+      </a>
+      <div class="flex items-center space-x-4 md:space-x-6 text-sm font-medium">
+        <a href="/" class="hover:text-marca-acento transition">Inicio</a>
+        <a href="/torneo/" class="text-marca-secundario font-bold border-b-2 border-marca-secundario pb-0.5">Torneo</a>
+        <a href="/sedes/" class="hover:text-marca-acento transition">Sedes</a>
+        <a href="/inscripcion/" class="bg-marca-secundario hover:bg-opacity-90 text-white px-4 py-2 rounded-xl transition font-semibold shadow-md">Inscribirse</a>
+        <a href="/contacto/" class="hover:text-marca-acento transition">Contacto</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- CABECERA DE SECCIÓN -->
+  <header class="bg-marca-oscuro text-white py-16 border-b border-slate-800 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 text-center relative z-10">
+      <span class="text-marca-acento font-bold uppercase tracking-widest text-xs">Información Técnica & Dossiers</span>
+      <h1 class="text-4xl sm:text-5xl font-black mt-2">Detalles del Torneo 2027</h1>
+      <p class="text-gray-300 max-w-2xl mx-auto mt-4 text-sm sm:text-base">
+        Descarga toda la normativa, categorías y calendario de la competición en tu idioma preferido.
+      </p>
+    </div>
+  </header>
+
+  <!-- DESCARGA DE DOSSIERS -->
+  <section class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-extrabold text-marca-oscuro">Dossier Oficial del Torneo</h2>
+      <p class="text-gray-600 mt-2">Descarga el documento informativo completo en PDF</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+      <!-- Dossier Castellano -->
+      <div class="bg-white p-8 rounded-3xl border border-gray-200 shadow-md flex flex-col justify-between items-center text-center hover:border-marca-secundario transition">
+        <div>
+          <div class="w-16 h-16 bg-red-100 text-red-600 rounded-2xl flex items-center justify-center mx-auto mb-4 font-bold text-xl">PDF</div>
+          <h3 class="text-xl font-bold text-marca-oscuro mb-2">Dossier Informativo (Español)</h3>
+          <p class="text-gray-600 text-sm mb-6">Incluye reglamento completo, sistema de competición, servicios incluidos y normativa de las sedes.</p>
+        </div>
+        <a href="/docs/dossier-es.pdf" target="_blank" class="w-full bg-marca-principal hover:bg-opacity-90 text-white font-bold py-3.5 px-6 rounded-xl transition inline-flex items-center justify-center space-x-2">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+          <span>Descargar Dossier (ES)</span>
+        </a>
+      </div>
+
+      <!-- Dossier Inglés -->
+      <div class="bg-white p-8 rounded-3xl border border-gray-200 shadow-md flex flex-col justify-between items-center text-center hover:border-marca-secundario transition">
+        <div>
+          <div class="w-16 h-16 bg-blue-100 text-marca-principal rounded-2xl flex items-center justify-center mx-auto mb-4 font-bold text-xl">PDF</div>
+          <h3 class="text-xl font-bold text-marca-oscuro mb-2">Official Dossier (English)</h3>
+          <p class="text-gray-600 text-sm mb-6">Complete guide with competition rules, schedule breakdown, accommodations, and tournament services.</p>
+        </div>
+        <a href="/docs/dossier-en.pdf" target="_blank" class="w-full bg-marca-principal hover:bg-opacity-90 text-white font-bold py-3.5 px-6 rounded-xl transition inline-flex items-center justify-center space-x-2">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+          <span>Download Dossier (EN)</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- INFORMACIÓN DE PACKS EXTRA -->
+  <section class="py-16 bg-slate-100 border-y border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <span class="text-marca-secundario font-bold uppercase text-xs tracking-wider">Experiencia Completa</span>
+        <h2 class="text-3xl font-extrabold text-marca-oscuro mt-1">Servicios y Packs Extra</h2>
+        <p class="text-gray-600 mt-2 text-sm">Diseñados para complementar la estancia de tu club, familiares y acompañantes durante el torneo.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white p-6 rounded-3xl border border-gray-200 shadow-sm">
+          <div class="w-12 h-12 bg-marca-acento/20 rounded-xl flex items-center justify-center text-marca-oscuro mb-4 font-bold">🚍</div>
+          <h3 class="font-bold text-lg text-marca-oscuro mb-2">Traslados & Shuttle</h3>
+          <p class="text-gray-600 text-sm">Servicio opcional de transporte exclusivo entre hoteles, las sedes de Cunit y Cubelles, y estaciones de enlace.</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-3xl border border-gray-200 shadow-sm">
+          <div class="w-12 h-12 bg-marca-acento/20 rounded-xl flex items-center justify-center text-marca-oscuro mb-4 font-bold">🎟️</div>
+          <h3 class="font-bold text-lg text-marca-oscuro mb-2">Packs Acompañantes</h3>
+          <p class="text-gray-600 text-sm">Alojamiento preferente en los hoteles oficiales del torneo con pulsera de acceso VIP y descuento en restauración.</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-3xl border border-gray-200 shadow-sm">
+          <div class="w-12 h-12 bg-marca-acento/20 rounded-xl flex items-center justify-center text-marca-oscuro mb-4 font-bold">👕</div>
+          <h3 class="font-bold text-lg text-marca-oscuro mb-2">Merchandising Oficial</h3>
+          <p class="text-gray-600 text-sm">Reserva anticipada de camisetas conmemorativas, sudaderas oficiales y equipación personalizada para equipos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOTÓN DIRECTO A INSCRIPCIÓN -->
+  <section class="py-16 max-w-5xl mx-auto px-4 text-center">
+    <div class="bg-marca-principal text-white p-10 rounded-3xl shadow-xl">
+      <h2 class="text-3xl font-extrabold mb-4">¿Preparado para asegurar la plaza de tu equipo?</h2>
+      <p class="text-gray-200 max-w-xl mx-auto mb-8 text-sm sm:text-base">Las plazas para la edición 2027 son limitadas por categoría. Completa la inscripción en un par de minutos.</p>
+      <a href="/inscripcion/" class="inline-block bg-marca-secundario hover:bg-opacity-90 text-white font-black px-10 py-4 rounded-xl text-lg transition shadow-lg transform hover:-translate-y-0.5">
+        Ir al Formulario de Inscripción →
+      </a>
+    </div>
+  </section>
+
+  <!-- COLABORADORES -->
+  <section class="bg-slate-900 py-12 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 text-center">
+      <p class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-8">Organizan y Colaboran</p>
+      <div class="flex flex-wrap justify-center items-center gap-10 sm:gap-16">
+        <div class="p-2 transition duration-300 hover:scale-105"><img src="/logoose.svg" alt="OSE Barcelona" class="h-14 sm:h-20 w-auto object-contain"></div>
+        <div class="p-2 transition duration-300 hover:scale-105"><img src="/logocunit.svg" alt="A.B. Cunit" class="h-14 sm:h-20 w-auto object-contain"></div>
+        <div class="p-2 transition duration-300 hover:scale-105"><img src="/logocube.svg" alt="C.B. Cubelles" class="h-14 sm:h-20 w-auto object-contain"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-slate-950 text-gray-500 py-8 text-center text-xs border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4">
+      <img src="/PenedesMaritimCuplogo.svg" alt="Logo Penedès Marítim Cup" class="h-8 w-auto mx-auto mb-3">
+      <p class="text-gray-400 font-semibold mb-1">PENEDÈS MARÍTIM BASKETBALL CUP 2027</p>
+      <p>© 2027 A. B. Cunit & OSE Barcelona & C. B. Cubelles. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
