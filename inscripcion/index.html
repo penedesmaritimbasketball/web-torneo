@@ -284,52 +284,69 @@
     // URL DE GOOGLE APPS SCRIPT / GOOGLE SHEETS
     const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbx07-n5wnVR0WVmnLpLGRkwvxgWlk5knOAHdvMcGVrGKrR572jHiaIO5St_T-NSpMwJOg/exec';
 
-    // INTERACCIÓN DE ENVÍO DE FORMULARIO
-    document.getElementById('form-torneo').addEventListener('submit', function(e) {
+    let idiomaActual = localStorage.getItem('idioma_preferido') || 'es';
+
+    // ENVÍO DE FORMULARIO COMPATIBLE CON TU GOOGLE SHEETS
+    document.getElementById('form-torneo').addEventListener('submit', async function(e) {
       e.preventDefault();
-      
+
       const btn = document.getElementById('btn-submit');
       const msg = document.getElementById('mensaje-estado');
-      const idiomaActual = localStorage.getItem('idioma_preferido') || 'es';
 
-      // Estado de Carga
+      // Estado de carga visual
       btn.disabled = true;
       btn.classList.add('opacity-75', 'cursor-not-allowed');
       btn.innerHTML = `
-        <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+        <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
           <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
           <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
         </svg>
-        <span>${idiomaActual === 'es' ? 'Procesando envío...' : 'Submitting...'}</span>
+        <span>${idiomaActual === 'es' ? 'Enviando...' : 'Submitting...'}</span>
       `;
+      msg.classList.add('hidden');
 
-      const formData = new FormData(this);
+      // Objeto JSON con los nombres exactos que lee tu Apps Script
+      const datos = {
+        idioma: idiomaActual.toUpperCase(),
+        club: document.getElementById('club').value,
+        categoria: document.getElementById('categoria').value,
+        nivel: document.getElementById('nivel').value,
+        videoUrl: document.getElementById('videoUrl').value,
+        masEquipos: document.getElementById('masEquipos').value,
+        contacto: document.getElementById('contacto').value,
+        telefono: document.getElementById('telefono').value,
+        email: document.getElementById('email').value
+      };
 
-      fetch(GOOGLE_SCRIPT_URL, {
-        method: 'POST',
-        body: formData
-      })
-      .then(res => {
+      try {
+        await fetch(APPS_SCRIPT_URL, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(datos)
+        });
+
+        // Respuesta Exitosa
         msg.classList.remove('hidden', 'bg-red-50', 'text-red-700', 'border-red-200');
-        msg.classList.add('bg-green-50', 'text-green-800', 'border-green-200');
+        msg.classList.add('bg-green-50', 'text-green-800', 'border-green-200', 'block', 'p-4', 'rounded-xl', 'text-center', 'text-sm', 'font-bold', 'border');
         msg.textContent = idiomaActual === 'es' 
           ? '¡Solicitud recibida con éxito! Revisaremos los datos y nos pondremos en contacto.' 
           : 'Registration received successfully! We will review your details and contact you shortly.';
+        
         this.reset();
-      })
-      .catch(err => {
+      } catch (error) {
+        // Respuesta en caso de error de red
         msg.classList.remove('hidden', 'bg-green-50', 'text-green-800', 'border-green-200');
-        msg.classList.add('bg-red-50', 'text-red-700', 'border-red-200');
+        msg.classList.add('bg-red-50', 'text-red-700', 'border-red-200', 'block', 'p-4', 'rounded-xl', 'text-center', 'text-sm', 'font-bold', 'border');
         msg.textContent = idiomaActual === 'es' 
           ? 'Ocurrió un problema al enviar. Escríbenos directamente a penedes.maritim.basketball@gmail.com' 
           : 'Submission error. Please email us directly at penedes.maritim.basketball@gmail.com';
-      })
-      .finally(() => {
+      } finally {
         btn.disabled = false;
         btn.classList.remove('opacity-75', 'cursor-not-allowed');
         btn.innerHTML = `<span>${idiomaActual === 'es' ? 'Enviar Pre-Inscripción' : 'Submit Pre-Registration'}</span>`;
         msg.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      });
+      }
     });
 
     // SISTEMA DE IDIOMA DINÁMICO (ES / EN)
