@@ -109,7 +109,7 @@
       
       <!-- Foto promocional con efecto Zoom al hacer Hover -->
       <div class="lg:col-span-5 relative min-h-[250px] lg:min-h-full overflow-hidden">
-        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 ease-out group-hover:scale-110" style="background-image: url('/experiencias-extra.jpg');"></div>
+        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 ease-out group-hover:scale-110" style="background-image: url('/experiencias-extra.JPG');"></div>
         <div class="absolute inset-0 bg-gradient-to-t from-marca-oscuro via-slate-900/40 to-transparent lg:bg-gradient-to-r lg:from-transparent lg:via-marca-oscuro/40 lg:to-marca-oscuro"></div>
         
         <span class="absolute top-4 left-4 bg-marca-secundario text-white text-xs font-bold px-3 py-1 rounded-full uppercase shadow-lg transition-transform duration-300 group-hover:scale-105" data-es="Experiencias Extra" data-en="Extra Experiences">
@@ -286,12 +286,42 @@
 
     let idiomaActual = localStorage.getItem('idioma_preferido') || 'es';
 
-    // ENVÍO DE FORMULARIO COMPATIBLE CON TU GOOGLE SHEETS
+    // ENVÍO DE FORMULARIO CON VALIDACIONES Y CONTROL DE EXCEPCIONES
     document.getElementById('form-torneo').addEventListener('submit', async function(e) {
       e.preventDefault();
 
       const btn = document.getElementById('btn-submit');
       const msg = document.getElementById('mensaje-estado');
+
+      const emailInput = document.getElementById('email').value.trim();
+      const telefonoInput = document.getElementById('telefono').value.trim();
+
+      // EXPRESIONES REGULARES DE VALIDACIÓN
+      const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      // Permite opcional +, números, espacios, guiones y paréntesis (mínimo 7 dígitos/caracteres)
+      const regexTelefono = /^\+?[0-9\s\-\(\)]{7,20}$/;
+
+      // 1. CONTROL DE EXCEPCIÓN: VALIDAR CORREO ELECTRÓNICO
+      if (!regexEmail.test(emailInput)) {
+        msg.classList.remove('hidden', 'bg-green-50', 'text-green-800', 'border-green-200');
+        msg.classList.add('bg-red-50', 'text-red-700', 'border-red-200', 'block', 'p-4', 'rounded-xl', 'text-center', 'text-sm', 'font-bold', 'border');
+        msg.textContent = idiomaActual === 'es' 
+          ? 'Por favor, introduce una dirección de correo electrónico válida (ej: contacto@club.com).' 
+          : 'Please enter a valid email address (e.g. contact@club.com).';
+        msg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        return; // Interrumpe el envío
+      }
+
+      // 2. CONTROL DE EXCEPCIÓN: VALIDAR TELÉFONO
+      if (!regexTelefono.test(telefonoInput)) {
+        msg.classList.remove('hidden', 'bg-green-50', 'text-green-800', 'border-green-200');
+        msg.classList.add('bg-red-50', 'text-red-700', 'border-red-200', 'block', 'p-4', 'rounded-xl', 'text-center', 'text-sm', 'font-bold', 'border');
+        msg.textContent = idiomaActual === 'es' 
+          ? 'Por favor, introduce un número de teléfono válido (ej: +34 600 000 000).' 
+          : 'Please enter a valid phone number (e.g. +34 600 000 000).';
+        msg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        return; // Interrumpe el envío
+      }
 
       // Estado de carga visual
       btn.disabled = true;
@@ -305,17 +335,17 @@
       `;
       msg.classList.add('hidden');
 
-      // Objeto JSON con los datos del formulario
+      // Objeto JSON con los datos limpios
       const datos = {
         idioma: idiomaActual.toUpperCase(),
-        club: document.getElementById('club').value,
+        club: document.getElementById('club').value.trim(),
         categoria: document.getElementById('categoria').value,
-        nivel: document.getElementById('nivel').value,
-        videoUrl: document.getElementById('videoUrl').value,
+        nivel: document.getElementById('nivel').value.trim(),
+        videoUrl: document.getElementById('videoUrl').value.trim(),
         masEquipos: document.getElementById('masEquipos').value,
-        contacto: document.getElementById('contacto').value,
-        telefono: document.getElementById('telefono').value,
-        email: document.getElementById('email').value
+        contacto: document.getElementById('contacto').value.trim(),
+        telefono: telefonoInput,
+        email: emailInput
       };
 
       try {
@@ -335,12 +365,12 @@
         
         this.reset();
       } catch (error) {
-        // Respuesta en caso de error de red
+        // Respuesta en caso de error de red o servidor
         msg.classList.remove('hidden', 'bg-green-50', 'text-green-800', 'border-green-200');
         msg.classList.add('bg-red-50', 'text-red-700', 'border-red-200', 'block', 'p-4', 'rounded-xl', 'text-center', 'text-sm', 'font-bold', 'border');
         msg.textContent = idiomaActual === 'es' 
-          ? 'Ocurrió un problema al enviar. Escríbenos directamente a penedes.maritim.basketball@gmail.com' 
-          : 'Submission error. Please email us directly at penedes.maritim.basketball@gmail.com';
+          ? 'Ocurrió un problema de conexión al enviar. Escríbenos directamente a penedes.maritim.basketball@gmail.com' 
+          : 'Connection error during submission. Please email us directly at penedes.maritim.basketball@gmail.com';
       } finally {
         btn.disabled = false;
         btn.classList.remove('opacity-75', 'cursor-not-allowed');
