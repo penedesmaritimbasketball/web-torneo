@@ -48,7 +48,7 @@
         <a href="/" class="hover:text-marca-secundario transition duration-200" data-es="Inicio" data-en="Home">Inicio</a>
         <a href="/torneo/" class="hover:text-marca-secundario transition duration-200" data-es="Torneo" data-en="Tournament">Torneo</a>
         <a href="/sedes/" class="text-marca-secundario font-bold border-b-2 border-marca-secundario pb-0.5" data-es="Sedes" data-en="Venues">Sedes</a>
-        <a href="/inscripcion/" class="bg-marca-secundario hover:bg-opacity-90 text-white px-4 py-2 rounded-xl transition duration-200 font-semibold shadow-md text-sm hover:-translate-y-0.5" data-es="Inscribirse" data-en="Register">Inscribirse</a>
+        <a href="/inscripcion/" class="bg-marca-secundario hover:bg-opacity-90 active:scale-95 text-white px-4 py-2 rounded-xl transition duration-200 font-semibold shadow-md text-sm hover:-translate-y-0.5" data-es="Inscribirse" data-en="Register">Inscribirse</a>
         <a href="/contacto/" class="hover:text-marca-secundario transition duration-200" data-es="Contacto" data-en="Contact">Contacto</a>
 
         <div class="flex items-center space-x-1 bg-slate-800/80 px-2.5 py-1 rounded-lg border border-slate-700 text-xs font-bold ml-1">
@@ -104,7 +104,7 @@
     </div>
   </header>
 
-  <!-- ==================== UBIACIÓN GENERAL Y MAPA ==================== -->
+  <!-- ==================== UBICACIÓN GENERAL Y MAPA ==================== -->
   <section class="py-12 sm:py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-10">
       <h2 class="text-2xl sm:text-3xl font-extrabold text-marca-oscuro" data-es="Conexión Estratégica: Barcelona, Cunit y Cubelles" data-en="Strategic Connection: Barcelona, Cunit & Cubelles">Conexión Estratégica: Barcelona, Cunit y Cubelles</h2>
@@ -137,30 +137,46 @@
 
       <div class="grid md:grid-cols-2 gap-8">
         <!-- Card Cunit -->
-        <div class="bg-white rounded-3xl overflow-hidden border border-gray-200 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl group">
-          <div class="h-56 bg-slate-200 relative overflow-hidden">
-            <img src="/costa-cunit.png" alt="Playa de Cunit" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-            <span class="absolute top-4 left-4 bg-marca-oscuro text-white text-xs font-bold px-3 py-1.5 rounded-full shadow">Cunit Beach</span>
+        <div class="bg-white rounded-3xl overflow-hidden border border-gray-200 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl group flex flex-col justify-between">
+          <div>
+            <div class="h-56 bg-slate-200 relative overflow-hidden">
+              <img src="/costa-cunit.png" alt="Playa de Cunit" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+              <span class="absolute top-4 left-4 bg-marca-oscuro text-white text-xs font-bold px-3 py-1.5 rounded-full shadow">Cunit Beach</span>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-marca-oscuro mb-2" data-es="Playa y Entorno de Cunit" data-en="Cunit Beach & Environment">Playa y Entorno de Cunit</h3>
+              <p class="text-gray-600 text-sm leading-relaxed" data-es="Con más de 2 kilómetros de playas protegidas por espigones en forma de semicírculo, Cunit ofrece un mar calmado y seguro, perfecto para pasear y descansar entre jornada y jornada de partidos." data-en="With over 2 km of beaches protected by semicircular breakwaters, Cunit offers calm and safe waters, ideal for strolling and relaxing between match sessions.">
+                Con más de 2 kilómetros de playas protegidas por espigones en forma de semicírculo, Cunit ofrece un mar calmado y seguro, perfecto para pasear y descansar entre jornada y jornada de partidos.
+              </p>
+            </div>
           </div>
-          <div class="p-6">
-            <h3 class="text-xl font-bold text-marca-oscuro mb-2" data-es="Playa y Entorno de Cunit" data-en="Cunit Beach & Environment">Playa y Entorno de Cunit</h3>
-            <p class="text-gray-600 text-sm leading-relaxed" data-es="Con más de 2 kilómetros de playas protegidas por espigones en forma de semicírculo, Cunit ofrece un mar calmado y seguro, perfecto para pasear y descansar entre jornada y jornada de partidos." data-en="With over 2 km of beaches protected by semicircular breakwaters, Cunit offers calm and safe waters, ideal for strolling and relaxing between match sessions.">
-              Con más de 2 kilómetros de playas protegidas por espigones en forma de semicírculo, Cunit ofrece un mar calmado y seguro, perfecto para pasear y descansar entre jornada y jornada de partidos.
-            </p>
+          <div class="p-6 pt-0">
+            <a href="https://maps.google.com/?q=Platja+de+Cunit" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center space-x-2 bg-slate-100 hover:bg-marca-principal hover:text-white text-gray-700 font-semibold py-2.5 px-4 rounded-xl transition-all duration-300 text-xs sm:text-sm">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              <span data-es="Ver Playa en Google Maps" data-en="View Beach on Google Maps">Ver Playa en Google Maps</span>
+            </a>
           </div>
         </div>
 
         <!-- Card Cubelles -->
-        <div class="bg-white rounded-3xl overflow-hidden border border-gray-200 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl group">
-          <div class="h-56 bg-slate-200 relative overflow-hidden">
-            <img src="/costa-cube.png" alt="Playa de Cubelles" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-            <span class="absolute top-4 left-4 bg-marca-secundario text-white text-xs font-bold px-3 py-1.5 rounded-full shadow">Cubelles Coast</span>
+        <div class="bg-white rounded-3xl overflow-hidden border border-gray-200 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl group flex flex-col justify-between">
+          <div>
+            <div class="h-56 bg-slate-200 relative overflow-hidden">
+              <img src="/costa-cube.png" alt="Playa de Cubelles" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+              <span class="absolute top-4 left-4 bg-marca-secundario text-white text-xs font-bold px-3 py-1.5 rounded-full shadow">Cubelles Coast</span>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-marca-oscuro mb-2" data-es="Paseo Marítimo de Cubelles" data-en="Cubelles Promenade">Paseo Marítimo de Cubelles</h3>
+              <p class="text-gray-600 text-sm leading-relaxed" data-es="Un municipio emblemático del Garraf con encanto marinero, extensas playas naturales, zonas de restauración y una magnífica conectividad peatonal con el pabellón deportivo." data-en="An emblematic town on the Garraf coast with maritime charm, wide natural beaches, restaurants, and excellent pedestrian access to the sports hall.">
+                Un municipio emblemático del Garraf con encanto marinero, extensas playas naturales, zonas de restauración y una magnífica conectividad peatonal con el pabellón deportivo.
+              </p>
+            </div>
           </div>
-          <div class="p-6">
-            <h3 class="text-xl font-bold text-marca-oscuro mb-2" data-es="Paseo Marítimo de Cubelles" data-en="Cubelles Promenade">Paseo Marítimo de Cubelles</h3>
-            <p class="text-gray-600 text-sm leading-relaxed" data-es="Un municipio emblemático del Garraf con encanto marinero, extensas playas naturales, zonas de restauración y una magnífica conectividad peatonal con el pabellón deportivo." data-en="An emblematic town on the Garraf coast with maritime charm, wide natural beaches, restaurants, and excellent pedestrian access to the sports hall.">
-              Un municipio emblemático del Garraf con encanto marinero, extensas playas naturales, zonas de restauración y una magnífica conectividad peatonal con el pabellón deportivo.
-            </p>
+          <div class="p-6 pt-0">
+            <a href="https://maps.google.com/?q=Passeig+Maritim+Cubelles" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center space-x-2 bg-slate-100 hover:bg-marca-principal hover:text-white text-gray-700 font-semibold py-2.5 px-4 rounded-xl transition-all duration-300 text-xs sm:text-sm">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              <span data-es="Ver Paseo en Google Maps" data-en="View Promenade on Google Maps">Ver Paseo en Google Maps</span>
+            </a>
           </div>
         </div>
       </div>
@@ -177,76 +193,130 @@
 
     <div class="grid md:grid-cols-2 gap-8">
       <!-- Pabellón Cunit -->
-      <div class="bg-white rounded-3xl overflow-hidden border border-gray-200 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl group">
-        <div class="h-60 bg-slate-200 relative overflow-hidden">
-          <img src="/pabello-cunit.png" alt="Pavelló Municipal de Cunit" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+      <div class="bg-white rounded-3xl overflow-hidden border border-gray-200 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl group flex flex-col justify-between">
+        <div>
+          <div class="h-60 bg-slate-200 relative overflow-hidden">
+            <img src="/pabello-cunit.png" alt="Pavelló Municipal de Cunit" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+          </div>
+          <div class="p-6 sm:p-8">
+            <h3 class="text-xl font-bold text-marca-oscuro mb-2">Pavelló Municipal de Cunit</h3>
+            <p class="text-marca-secundario font-semibold text-xs uppercase tracking-wider mb-4" data-es="Sede Oficial A.B. Cunit" data-en="Official Venue A.B. Cunit">Sede Oficial A.B. Cunit</p>
+            <ul class="space-y-2 text-sm text-gray-600 mb-4">
+              <li class="flex items-center space-x-2">
+                <span class="text-marca-secundario">✔</span>
+                <span data-es="Pista parquet polideportiva de máxima calidad" data-en="Top-quality parquet sports floor">Pista parquet polideportiva de máxima calidad</span>
+              </li>
+              <li class="flex items-center space-x-2">
+                <span class="text-marca-secundario">✔</span>
+                <span data-es="Gradas para más de 500 espectadores" data-en="Stands for 500+ spectators">Gradas para más de 500 espectadores</span>
+              </li>
+              <li class="flex items-center space-x-2">
+                <span class="text-marca-secundario">✔</span>
+                <span data-es="Vestuarios adaptados y zona de cafetería" data-en="Adapted locker rooms & cafeteria area">Vestuarios adaptados y zona de cafetería</span>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="p-6 sm:p-8">
-          <h3 class="text-xl font-bold text-marca-oscuro mb-2">Pavelló Municipal de Cunit</h3>
-          <p class="text-marca-secundario font-semibold text-xs uppercase tracking-wider mb-4" data-es="Sede Oficial A.B. Cunit" data-en="Official Venue A.B. Cunit">Sede Oficial A.B. Cunit</p>
-          <ul class="space-y-2 text-sm text-gray-600">
-            <li class="flex items-center space-x-2">
-              <span class="text-marca-secundario">✔</span>
-              <span data-es="Pista parquet polideportiva de máxima calidad" data-en="Top-quality parquet sports floor">Pista parquet polideportiva de máxima calidad</span>
-            </li>
-            <li class="flex items-center space-x-2">
-              <span class="text-marca-secundario">✔</span>
-              <span data-es="Gradas para más de 500 espectadores" data-en="Stands for 500+ spectators">Gradas para más de 500 espectadores</span>
-            </li>
-            <li class="flex items-center space-x-2">
-              <span class="text-marca-secundario">✔</span>
-              <span data-es="Vestuarios adaptados y zona de cafetería" data-en="Adapted locker rooms & cafeteria area">Vestuarios adaptados y zona de cafetería</span>
-            </li>
-          </ul>
+        <div class="p-6 sm:p-8 pt-0">
+          <a href="https://maps.google.com/?q=Pavello+Municipal+de+Cunit" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center space-x-2 bg-marca-principal hover:bg-opacity-95 text-white font-bold py-3 px-4 rounded-xl transition duration-300 text-xs sm:text-sm shadow-md hover:-translate-y-0.5">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            <span data-es="Cómo llegar al Pabellón de Cunit" data-en="Directions to Cunit Arena">Cómo llegar al Pabellón de Cunit</span>
+          </a>
         </div>
       </div>
 
       <!-- Pabellón Cubelles -->
-      <div class="bg-white rounded-3xl overflow-hidden border border-gray-200 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl group">
-        <div class="h-60 bg-slate-200 relative overflow-hidden">
-          <img src="/pabello-cube.png" alt="Pavelló Poliesportiu Municipal de Cubelles" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+      <div class="bg-white rounded-3xl overflow-hidden border border-gray-200 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl group flex flex-col justify-between">
+        <div>
+          <div class="h-60 bg-slate-200 relative overflow-hidden">
+            <img src="/pabello-cube.png" alt="Pavelló Poliesportiu Municipal de Cubelles" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+          </div>
+          <div class="p-6 sm:p-8">
+            <h3 class="text-xl font-bold text-marca-oscuro mb-2">Pavelló Poliesportiu de Cubelles</h3>
+            <p class="text-marca-secundario font-semibold text-xs uppercase tracking-wider mb-4" data-es="Sede Oficial C.B. Cubelles" data-en="Official Venue C.B. Cubelles">Sede Oficial C.B. Cubelles</p>
+            <ul class="space-y-2 text-sm text-gray-600 mb-4">
+              <li class="flex items-center space-x-2">
+                <span class="text-marca-secundario">✔</span>
+                <span data-es="Instalaciones renovadas y equipamiento oficial" data-en="Renovated facilities & official equipment">Instalaciones renovadas y equipamiento oficial</span>
+              </li>
+              <li class="flex items-center space-x-2">
+                <span class="text-marca-secundario">✔</span>
+                <span data-es="Marcadores electrónicos de última generación" data-en="Latest generation electronic scoreboards">Marcadores electrónicos de última generación</span>
+              </li>
+              <li class="flex items-center space-x-2">
+                <span class="text-marca-secundario">✔</span>
+                <span data-es="Fácil aparcamiento para autobuses de clubes" data-en="Easy bus parking for visiting clubs">Fácil aparcamiento para autobuses de clubes</span>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="p-6 sm:p-8">
-          <h3 class="text-xl font-bold text-marca-oscuro mb-2">Pavelló Poliesportiu de Cubelles</h3>
-          <p class="text-marca-secundario font-semibold text-xs uppercase tracking-wider mb-4" data-es="Sede Oficial C.B. Cubelles" data-en="Official Venue C.B. Cubelles">Sede Oficial C.B. Cubelles</p>
-          <ul class="space-y-2 text-sm text-gray-600">
-            <li class="flex items-center space-x-2">
-              <span class="text-marca-secundario">✔</span>
-              <span data-es="Instalaciones renovadas y equipamiento oficial" data-en="Renovated facilities & official equipment">Instalaciones renovadas y equipamiento oficial</span>
-            </li>
-            <li class="flex items-center space-x-2">
-              <span class="text-marca-secundario">✔</span>
-              <span data-es="Marcadores electrónicos de última generación" data-en="Latest generation electronic scoreboards">Marcadores electrónicos de última generación</span>
-            </li>
-            <li class="flex items-center space-x-2">
-              <span class="text-marca-secundario">✔</span>
-              <span data-es="Fácil aparcamiento para autobuses de clubes" data-en="Easy bus parking for visiting clubs">Fácil aparcamiento para autobuses de clubes</span>
-            </li>
-          </ul>
+        <div class="p-6 sm:p-8 pt-0">
+          <a href="https://maps.google.com/?q=Pavello+Poliesportiu+Municipal+de+Cubelles" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center space-x-2 bg-marca-principal hover:bg-opacity-95 text-white font-bold py-3 px-4 rounded-xl transition duration-300 text-xs sm:text-sm shadow-md hover:-translate-y-0.5">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            <span data-es="Cómo llegar al Pabellón de Cubelles" data-en="Directions to Cubelles Arena">Cómo llegar al Pabellón de Cubelles</span>
+          </a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ==================== HOTELES 3 ESTRELLAS ==================== -->
+  <!-- ==================== HOTELES 3 ESTRELLAS (INTERACTIVO) ==================== -->
   <section class="py-12 sm:py-16 bg-slate-100 border-t border-gray-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="bg-white rounded-3xl border border-gray-200 overflow-hidden shadow-md grid md:grid-cols-2 items-center">
-        <div class="h-64 sm:h-full min-h-[280px] bg-slate-200 relative">
-          <img src="/hotel-3estrellas.png" alt="Hoteles Oficiales 3 Estrellas" class="w-full h-full object-cover">
-          <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-          <span class="absolute bottom-4 left-4 bg-marca-acento text-marca-oscuro font-bold px-3 py-1 rounded-full text-xs">Hoteles 3*** Seleccionados</span>
+      <div class="bg-white rounded-3xl border border-gray-200 overflow-hidden shadow-lg grid md:grid-cols-12 items-stretch">
+        
+        <!-- Imagen con Tag Dinámico -->
+        <div class="md:col-span-5 h-64 md:h-full min-h-[300px] bg-slate-200 relative overflow-hidden">
+          <img src="/hotel-3estrellas.png" alt="Hoteles Oficiales 3 Estrellas" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+          <span class="absolute bottom-4 left-4 bg-marca-acento text-marca-oscuro font-black px-3 py-1.5 rounded-full text-xs shadow-md">
+            Hoteles 3*** Seleccionados
+          </span>
         </div>
-        <div class="p-6 sm:p-10">
-          <span class="text-marca-secundario font-bold uppercase text-xs tracking-wider" data-es="Alojamiento Oficial" data-en="Official Accommodation">Alojamiento Oficial</span>
-          <h2 class="text-2xl sm:text-3xl font-extrabold text-marca-oscuro mt-1 mb-4" data-es="Hoteles 3 Estrellas de Costa" data-en="3-Star Coastal Hotels">Hoteles 3 Estrellas de Costa</h2>
-          <p class="text-gray-600 text-sm leading-relaxed mb-6" data-es="Hoteles de 3 estrellas situados junto al mar, equipados con régimen de pensión completa (desayuno, almuerzo y cena buffet) diseñados específicamente para el descanso de deportistas y familias." data-en="3-star hotels located by the sea, equipped with full board (buffet breakfast, lunch, and dinner) specifically tailored for athletes and family rest.">
-            Hoteles de 3 estrellas situados junto al mar, equipados con régimen de pensión completa (desayuno, almuerzo y cena buffet) diseñados específicamente para el descanso de deportistas y familias.
-          </p>
-          <a href="/inscripcion/" class="inline-block bg-marca-principal hover:bg-opacity-90 text-white font-bold px-6 py-3 rounded-xl text-sm transition-all duration-300 shadow-md" data-es="Consultar Reservas e Inscripción" data-en="Check Bookings & Registration">
-            Consultar Reservas e Inscripción
-          </a>
+
+        <!-- Contenido Interactivo -->
+        <div class="md:col-span-7 p-6 sm:p-10 flex flex-col justify-between space-y-6">
+          <div>
+            <span class="text-marca-secundario font-bold uppercase text-xs tracking-wider" data-es="Alojamiento Oficial Interactivo" data-en="Interactive Official Accommodation">Alojamiento Oficial Interactivo</span>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-marca-oscuro mt-1 mb-3" data-es="Hoteles 3 Estrellas de Costa" data-en="3-Star Coastal Hotels">Hoteles 3 Estrellas de Costa</h2>
+            <p class="text-gray-600 text-sm leading-relaxed" data-es="Hoteles seleccionados estratégicamente para ofrecer descanso, nutrición deportiva y máximo confort durante todo el torneo." data-en="Strategically selected hotels providing rest, sports nutrition, and maximum comfort throughout the tournament.">
+              Hoteles seleccionados estratégicamente para ofrecer descanso, nutrición deportiva y máximo confort durante todo el torneo.
+            </p>
+
+            <!-- Pestañas Interactivas (Tabs) -->
+            <div class="mt-6">
+              <div class="flex flex-wrap gap-2 border-b border-gray-200 pb-3" id="hotel-tabs">
+                <button onclick="seleccionarInfoHotel('pension')" id="tab-pension" class="tab-btn px-4 py-2 text-xs sm:text-sm font-bold rounded-xl transition-all duration-200 bg-marca-principal text-white shadow-sm" data-es="🥗 Pensión Completa" data-en="🥗 Full Board">
+                  🥗 Pensión Completa
+                </button>
+                <button onclick="seleccionarInfoHotel('ubicacion')" id="tab-ubicacion" class="tab-btn px-4 py-2 text-xs sm:text-sm font-bold rounded-xl transition-all duration-200 bg-gray-100 text-gray-600 hover:bg-gray-200" data-es="🏖️ Junto al Mar" data-en="🏖️ Beachside Location">
+                  🏖️ Junto al Mar
+                </button>
+                <button onclick="seleccionarInfoHotel('servicios')" id="tab-servicios" class="tab-btn px-4 py-2 text-xs sm:text-sm font-bold rounded-xl transition-all duration-200 bg-gray-100 text-gray-600 hover:bg-gray-200" data-es="🚌 Logística Equipos" data-en="🚌 Team Logistics">
+                  🚌 Logística Equipos
+                </button>
+              </div>
+
+              <!-- Panel de Contenido Dinámico de la Pestaña -->
+              <div id="hotel-tab-content" class="mt-4 bg-slate-50 p-4 rounded-2xl border border-slate-200 min-h-[110px] flex items-center">
+                <p id="hotel-text" class="text-xs sm:text-sm text-gray-700 leading-relaxed font-medium">
+                  <!-- Se llena dinámicamente mediante JS -->
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Botones de Acción -->
+          <div class="flex flex-col sm:flex-row gap-3 pt-2">
+            <a href="/inscripcion/" class="inline-flex items-center justify-center bg-marca-secundario hover:bg-opacity-95 text-white font-bold px-6 py-3.5 rounded-xl text-sm transition-all duration-300 shadow-md hover:-translate-y-0.5 active:scale-95" data-es="Reservar Alojamiento e Inscripción" data-en="Book Accommodation & Register">
+              Reservar Alojamiento e Inscripción
+            </a>
+            <a href="/contacto/" class="inline-flex items-center justify-center bg-slate-100 hover:bg-slate-200 text-marca-oscuro font-bold px-6 py-3.5 rounded-xl text-sm transition-all duration-300 border border-gray-300 active:scale-95" data-es="Dudas de Alojamiento" data-en="Accommodation Questions">
+              Dudas de Alojamiento
+            </a>
+          </div>
         </div>
+
       </div>
     </div>
   </section>
@@ -271,24 +341,75 @@
     </div>
   </footer>
 
+  <!-- ==================== LÓGICA INTERACTIVA & IDIOMAS (JS) ==================== -->
   <script>
+    let idiomaActual = localStorage.getItem('idioma_preferido') || 'es';
+    let tabHotelActual = 'pension';
+
+    // DATOS DE LA SECCIÓN INTERACTIVA DE HOTELES
+    const datosHoteles = {
+      pension: {
+        es: "<strong>Régimen de Pensión Completa:</strong> Incluye desayuno, almuerzo y cena en formato buffet libre adaptado nutricionalmente a deportistas y técnicos.",
+        en: "<strong>Full Board Plan:</strong> Includes buffet breakfast, lunch, and dinner tailored specifically to match athletes' and coaches' nutrition needs."
+      },
+      ubicacion: {
+        es: "<strong>Ubicación Privilegiada:</strong> Todos los hoteles se encuentran a pocos metros del mar y de los paseos marítimos de Cunit y Cubelles.",
+        en: "<strong>Prime Location:</strong> All official hotels are located right by the sea and the coastal promenades of Cunit and Cubelles."
+      },
+      servicios: {
+        es: "<strong>Logística y Confort:</strong> Habitaciones equipadas con aire acondicionado, Wi-Fi gratuito, recepción 24h y facilidades para la coordinación de traslados de clubes.",
+        en: "<strong>Logistics & Comfort:</strong> Air-conditioned rooms, free Wi-Fi, 24/7 reception, and smooth coordination for team transfers."
+      }
+    };
+
+    // CAMBIAR PESTAÑA INTERACTIVA DE HOTEL
+    function seleccionarInfoHotel(tabKey) {
+      tabHotelActual = tabKey;
+      
+      // Actualizar clases de los botones de pestañas
+      ['pension', 'ubicacion', 'servicios'].forEach(key => {
+        const btn = document.getElementById(`tab-${key}`);
+        if (key === tabKey) {
+          btn.className = "tab-btn px-4 py-2 text-xs sm:text-sm font-bold rounded-xl transition-all duration-200 bg-marca-principal text-white shadow-sm scale-105";
+        } else {
+          btn.className = "tab-btn px-4 py-2 text-xs sm:text-sm font-bold rounded-xl transition-all duration-200 bg-gray-100 text-gray-600 hover:bg-gray-200";
+        }
+      });
+
+      // Actualizar texto según la pestaña seleccionada e idioma
+      const containerText = document.getElementById('hotel-text');
+      if (containerText && datosHoteles[tabKey]) {
+        containerText.innerHTML = datosHoteles[tabKey][idiomaActual];
+      }
+    }
+
+    // SISTEMA DE IDIOMA DINÁMICO
     function cambiarIdioma(lang) {
+      idiomaActual = lang;
       localStorage.setItem('idioma_preferido', lang);
+
+      // Botones de idioma en la barra de navegación
       document.querySelectorAll('.btn-lang-es').forEach(btn => {
         btn.className = lang === 'es' ? 'btn-lang-es text-marca-secundario font-bold transition' : 'btn-lang-es text-gray-400 hover:text-white transition';
       });
       document.querySelectorAll('.btn-lang-en').forEach(btn => {
         btn.className = lang === 'en' ? 'btn-lang-en text-marca-secundario font-bold transition' : 'btn-lang-en text-gray-400 hover:text-white transition';
       });
+
+      // Elementos con atributos data-es / data-en
       document.querySelectorAll('[data-es]').forEach(elemento => {
         const texto = elemento.getAttribute(`data-${lang}`);
         if (texto) elemento.textContent = texto;
       });
+
+      // Actualizar contenido activo de hoteles al cambiar de idioma
+      seleccionarInfoHotel(tabHotelActual);
     }
 
+    // INICIALIZACIÓN Y MENÚ MÓVIL
     document.addEventListener('DOMContentLoaded', () => {
-      const idiomaGuardado = localStorage.getItem('idioma_preferido') || 'es';
-      cambiarIdioma(idiomaGuardado);
+      cambiarIdioma(idiomaActual);
+      seleccionarInfoHotel('pension');
 
       const btnToggle = document.getElementById('btn-menu-toggle');
       const mobileMenu = document.getElementById('mobile-menu');
