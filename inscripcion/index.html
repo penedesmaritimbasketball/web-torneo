@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inscripción - Penedès Marítim Basketball Cup 2027</title>
+  <link rel="icon" type="image/svg+xml" href="/PenedesMaritimCuplogo.svg">
+  
+  <!-- Google Fonts: Montserrat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- CONFIGURACIÓN DE COLORES PERSONALIZADOS -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Montserrat', 'sans-serif'] },
+          colors: {
+            marca: {
+              principal: '#173A7D',
+              secundario: '#F36B21',
+              oscuro: '#061B36',
+              acento: '#FFC928',
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased selection:bg-marca-secundario selection:text-white">
+
+  <!-- ==================== NAVEGACIÓN ADAPTATIVA ==================== -->
+  <nav class="bg-marca-oscuro text-white sticky top-0 z-50 shadow-md backdrop-blur-md bg-opacity-95 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+      
+      <a href="/" class="flex items-center space-x-2 sm:space-x-3 shrink-0 transition-transform duration-300 hover:scale-105">
+        <img src="/PenedesMaritimCuplogo.svg" alt="Logo Penedès Marítim Cup" class="h-9 w-auto sm:h-10">
+        <span class="text-base sm:text-lg font-black tracking-wider text-marca-secundario hidden sm:inline">PENEDÈS MARÍTIM BASKETBALL CUP</span>
+      </a>
+
+      <div class="hidden md:flex items-center space-x-5 text-sm font-medium">
+        <a href="/" class="hover:text-marca-secundario transition duration-200" data-es="Inicio" data-en="Home">Inicio</a>
+        <a href="/torneo/" class="hover:text-marca-secundario transition duration-200" data-es="Torneo" data-en="Tournament">Torneo</a>
+        <a href="/sedes/" class="hover:text-marca-secundario transition duration-200" data-es="Sedes" data-en="Venues">Sedes</a>
+        <a href="/inscripcion/" class="bg-marca-secundario text-white px-4 py-2 rounded-xl font-bold shadow-md text-sm border border-marca-secundario" data-es="Inscribirse" data-en="Register">Inscribirse</a>
+        <a href="/contacto/" class="hover:text-marca-secundario transition duration-200" data-es="Contacto" data-en="Contact">Contacto</a>
+
+        <div class="flex items-center space-x-1 bg-slate-800/80 px-2.5 py-1 rounded-lg border border-slate-700 text-xs font-bold ml-1">
+          <button onclick="cambiarIdioma('es')" class="btn-lang-es text-marca-secundario transition">ES</button>
+          <span class="text-slate-500">|</span>
+          <button onclick="cambiarIdioma('en')" class="btn-lang-en text-gray-400 hover:text-white transition">EN</button>
+        </div>
+      </div>
+
+      <div class="flex items-center space-x-2 md:hidden">
+        <div class="flex items-center space-x-1 bg-slate-800/80 px-2 py-1 rounded-lg border border-slate-700 text-xs font-bold">
+          <button onclick="cambiarIdioma('es')" class="btn-lang-es text-marca-secundario transition">ES</button>
+          <span class="text-slate-500">|</span>
+          <button onclick="cambiarIdioma('en')" class="btn-lang-en text-gray-400 hover:text-white transition">EN</button>
+        </div>
+
+        <button id="btn-menu-toggle" type="button" class="text-gray-300 hover:text-white p-2 rounded-lg focus:outline-none" aria-label="Abrir menú">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path id="icon-menu-open" class="block" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            <path id="icon-menu-close" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden bg-marca-oscuro border-t border-slate-800 px-4 pt-3 pb-5 space-y-3">
+      <a href="/" class="block text-gray-200 hover:text-marca-secundario py-2 text-base font-semibold" data-es="Inicio" data-en="Home">Inicio</a>
+      <a href="/torneo/" class="block text-gray-200 hover:text-marca-secundario py-2 text-base font-semibold" data-es="Torneo" data-en="Tournament">Torneo</a>
+      <a href="/sedes/" class="block text-gray-200 hover:text-marca-secundario py-2 text-base font-semibold" data-es="Sedes" data-en="Venues">Sedes</a>
+      <a href="/contacto/" class="block text-gray-200 hover:text-marca-secundario py-2 text-base font-semibold" data-es="Contacto" data-en="Contact">Contacto</a>
+      <a href="/inscripcion/" class="block text-center bg-marca-secundario text-white py-3 rounded-xl font-bold shadow-md mt-2" data-es="Inscribirse" data-en="Register">Inscribirse</a>
+    </div>
+  </nav>
+
+  <!-- ==================== HERO ==================== -->
+  <header class="relative text-white py-14 sm:py-20 px-4 overflow-hidden border-b border-slate-800">
+    <div class="absolute inset-0 bg-cover bg-center filter brightness-90" style="background-image: url('/heroinscripcion-bg.jpg');"></div>
+    <div class="absolute inset-0 bg-marca-principal/85"></div>
+
+    <div class="relative z-10 max-w-4xl mx-auto text-center space-y-3">
+      <span class="inline-block bg-white/10 text-marca-acento font-bold px-3 py-1.5 rounded-full text-xs sm:text-sm uppercase tracking-widest border border-white/20 backdrop-blur-sm" data-es="Formulario Oficial 2027" data-en="Official 2027 Form">
+        Formulario Oficial 2027
+      </span>
+      <h1 class="text-3xl sm:text-5xl font-black" data-es="Inscripción de Equipos" data-en="Team Registration">
+        Inscripción de <span class="text-marca-secundario">Equipos</span>
+      </h1>
+      <p class="text-gray-100 text-sm sm:text-base max-w-xl mx-auto" data-es="Rellena los datos para pre-inscribir a tu equipo en el torneo." data-en="Fill in the details to pre-register your team for the tournament.">
+        Rellena los datos para pre-inscribir a tu equipo en el torneo.
+      </p>
+    </div>
+  </header>
+
+  <!-- ==================== BLOQUE DE PACKS EXTRA ==================== -->
+  <section class="max-w-4xl mx-auto px-4 mt-8">
+    <div class="bg-gradient-to-r from-marca-oscuro to-marca-principal text-white p-6 sm:p-8 rounded-3xl shadow-lg border border-slate-700 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div>
+        <span class="inline-block bg-marca-secundario text-white text-xs font-bold px-3 py-1 rounded-full uppercase mb-2" data-es="Servicio Opcional" data-en="Optional Service">Servicio Opcional</span>
+        <h3 class="text-xl font-bold" data-es="¿Necesitas contratar Packs Extra o Acompañantes?" data-en="Do you need Extra Packages or Supporters?">¿Necesitas contratar Packs Extra o Acompañantes?</h3>
+        <p class="text-gray-300 text-sm mt-1" data-es="Reserva traslados, merchandising o alojamientos adicionales en nuestro formulario externo dedicado." data-en="Book transfers, merchandising or additional accommodation in our external dedicated form.">
+          Reserva traslados, merchandising o alojamientos adicionales en nuestro formulario externo dedicado.
+        </p>
+      </div>
+      <a href="https://forms.google.com/tu-link-de-packs-extra" target="_blank" rel="noopener noreferrer" class="shrink-0 w-full md:w-auto text-center bg-marca-acento hover:bg-yellow-400 text-marca-oscuro font-bold px-6 py-3.5 rounded-xl transition duration-200 text-sm shadow-md" data-es="Abrir Formulario de Packs Extra ↗" data-en="Open Extra Packages Form ↗">
+        Abrir Formulario de Packs Extra ↗
+      </a>
+    </div>
+  </section>
+
+  <!-- ==================== FORMULARIO DE INSCRIPCIÓN ACTUALIZADO ==================== -->
+  <section class="py-10 max-w-4xl mx-auto px-4">
+    <div class="bg-white rounded-3xl p-6 sm:p-10 border border-gray-200 shadow-xl">
+      
+      <!-- Formulario interactivo conectado a Google Sheets -->
+      <form id="form-torneo" class="space-y-6">
+
+        <!-- Club / Academia -->
+        <div>
+          <label class="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-2" data-es="Nombre del Club o Academia *" data-en="Club or Academy Name *">Nombre del Club o Academia *</label>
+          <input type="text" id="club" name="club" required placeholder="Ej: CB Barcelona / Youth Academy" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-marca-secundario focus:border-transparent text-sm">
+        </div>
+
+        <!-- Categoría -->
+        <div>
+          <label class="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-2" data-es="Categoría del Equipo *" data-en="Team Category *">Categoría del Equipo *</label>
+          <select id="categoria" name="categoria" required class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-marca-secundario focus:border-transparent text-sm bg-white">
+            <option value="" data-es="Selecciona una categoría" data-en="Select a category">Selecciona una categoría</option>
+            <option value="U14 Masculino">U14 Masculino (Infantil)</option>
+            <option value="U14 Femenino">U14 Femenino (Infantil)</option>
+            <option value="U16 Masculino">U16 Masculino (Cadete)</option>
+            <option value="U16 Femenino">U16 Femenino (Cadete)</option>
+            <option value="U18 Masculino">U18 Masculino (Junior)</option>
+            <option value="U18 Femenino">U18 Femenino (Junior)</option>
+          </select>
+        </div>
+
+        <!-- Nivel Competitivo -->
+        <div>
+          <label class="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-2" data-es="Nivel competitivo o Liga en la que compiten *" data-en="Competitive level or League *">Nivel competitivo o Liga en la que compiten *</label>
+          <input type="text" id="nivel" name="nivel" required placeholder="Ej: 1ª División Autonómica / National League" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-marca-secundario focus:border-transparent text-sm">
+        </div>
+
+        <!-- Grabación de Partido (AHORA OPCIONAL) -->
+        <div>
+          <label class="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-2" data-es="Grabación de partido - Link (Opcional)" data-en="Game Recording - Link (Optional)">Grabación de partido - Link (Opcional)</label>
+          <input type="url" id="videoUrl" name="videoUrl" placeholder="https://youtube.com/watch?v=... o VEO/Drive" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-marca-secundario focus:border-transparent text-sm">
+          <p class="text-xs text-gray-500 mt-1.5" data-es="Enlace a YouTube, Vimeo, Veo o Google Drive (acceso público)." data-en="Link to YouTube, Vimeo, Veo or Google Drive (public access).">Enlace a YouTube, Vimeo, Veo o Google Drive (acceso público).</p>
+        </div>
+
+        <!-- ¿Más equipos? -->
+        <div>
+          <label class="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-2" data-es="¿Estáis interesados en inscribir más equipos del mismo club? *" data-en="Are you interested in registering more teams from the same club? *">¿Estáis interesados en inscribir más equipos del mismo club? *</label>
+          <select id="masEquipos" name="masEquipos" required class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-marca-secundario focus:border-transparent text-sm bg-white">
+            <option value="Sí / Yes" data-es="Sí / Yes" data-en="Yes / Sí">Sí / Yes</option>
+            <option value="No / No" data-es="No / No" data-en="No / No">No / No</option>
+          </select>
+        </div>
+
+        <hr class="border-gray-200 my-6">
+
+        <h3 class="text-lg font-bold text-marca-oscuro mb-4" data-es="Datos de Contacto" data-en="Contact Details">Datos de Contacto</h3>
+
+        <!-- Datos de Contacto -->
+        <div>
+          <label class="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-2" data-es="Persona de contacto del club *" data-en="Club Contact Person *">Persona de contacto del club *</label>
+          <input type="text" id="contacto" name="contacto" required placeholder="Nombre y Apellidos" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-marca-secundario focus:border-transparent text-sm">
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-2" data-es="Número de teléfono *" data-en="Phone Number *">Número de teléfono *</label>
+            <input type="tel" id="telefono" name="telefono" required placeholder="+34 600 000 000" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-marca-secundario focus:border-transparent text-sm">
+          </div>
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-2" data-es="Correo electrónico *" data-en="Email Address *">Correo electrónico *</label>
+            <input type="email" id="email" name="email" required placeholder="contacto@club.com" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-marca-secundario focus:border-transparent text-sm">
+          </div>
+        </div>
+
+        <!-- Botón Enviar -->
+        <button type="submit" id="btn-submit" class="w-full bg-marca-secundario hover:bg-opacity-90 text-white font-black py-4 rounded-xl text-base transition-all duration-300 shadow-lg mt-4 cursor-pointer" data-es="Enviar Inscripción" data-en="Submit Registration">
+          Enviar Inscripción
+        </button>
+
+        <!-- Estado de envío -->
+        <p id="mensaje-estado" class="text-center text-sm font-bold hidden mt-4"></p>
+      </form>
+
+    </div>
+  </section>
+
+  <!-- ==================== COLABORADORES & FOOTER ==================== -->
+  <section class="bg-slate-900 py-10 sm:py-12 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 text-center">
+      <p class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-6 sm:mb-8" data-es="Organizan y Colaboran" data-en="Organized and Supported by">Organizan y Colaboran</p>
+      <div class="flex flex-wrap justify-center items-center gap-8 sm:gap-16">
+        <div class="p-2 transition-all duration-300 hover:-translate-y-1 hover:scale-105"><img src="/logoose.svg" alt="OSE Barcelona" class="h-12 sm:h-20 w-auto object-contain"></div>
+        <div class="p-2 transition-all duration-300 hover:-translate-y-1 hover:scale-105"><img src="/logocunit.svg" alt="A.B. Cunit" class="h-12 sm:h-20 w-auto object-contain"></div>
+        <div class="p-2 transition-all duration-300 hover:-translate-y-1 hover:scale-105"><img src="/logocube.svg" alt="C.B. Cubelles" class="h-12 sm:h-20 w-auto object-contain"></div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-slate-950 text-gray-500 py-8 text-center text-xs border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4">
+      <img src="/PenedesMaritimCuplogo.svg" alt="Logo Penedès Marítim Cup" class="h-8 w-auto mx-auto mb-3">
+      <p class="text-gray-400 font-semibold mb-1">PENEDÈS MARÍTIM BASKETBALL CUP 2027</p>
+      <p data-es="© 2027 A. B. Cunit & OSE Barcelona & C. B. Cubelles. Todos los derechos reservados." data-en="© 2027 A. B. Cunit & OSE Barcelona & C. B. Cubelles. All rights reserved.">© 2027 A. B. Cunit & OSE Barcelona & C. B. Cubelles. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- ==================== SCRIPTS LOGICA & IDIOMA ==================== -->
+  <script>
+    // SUSTITUYE ESTA URL POR LA WEB APP URL DE TU GOOGLE APPS SCRIPT
+    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/TU_SCRIPT_ID_AQUI/exec';
+
+    document.getElementById('form-torneo').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const btn = document.getElementById('btn-submit');
+      const msg = document.getElementById('mensaje-estado');
+      const idiomaActual = localStorage.getItem('idioma_preferido') || 'es';
+
+      btn.disabled = true;
+      btn.textContent = idiomaActual === 'es' ? 'Enviando...' : 'Submitting...';
+
+      const formData = new FormData(this);
+
+      fetch(GOOGLE_SCRIPT_URL, {
+        method: 'POST',
+        body: formData
+      })
+      .then(res => {
+        msg.classList.remove('hidden', 'text-red-600');
+        msg.classList.add('text-green-600');
+        msg.textContent = idiomaActual === 'es' 
+          ? '¡Inscripción enviada correctamente! Nos pondremos en contacto muy pronto.' 
+          : 'Registration successfully submitted! We will contact you shortly.';
+        this.reset();
+      })
+      .catch(err => {
+        msg.classList.remove('hidden', 'text-green-600');
+        msg.classList.add('text-red-600');
+        msg.textContent = idiomaActual === 'es' 
+          ? 'Hubo un error al enviar. Por favor, escríbenos a penedes.maritim.basketball@gmail.com' 
+          : 'An error occurred. Please contact us at penedes.maritim.basketball@gmail.com';
+      })
+      .finally(() => {
+        btn.disabled = false;
+        btn.textContent = idiomaActual === 'es' ? 'Enviar Inscripción' : 'Submit Registration';
+      });
+    });
+
+    // SISTEMA DE IDIOMA DINÁMICO
+    function cambiarIdioma(lang) {
+      localStorage.setItem('idioma_preferido', lang);
+      document.querySelectorAll('.btn-lang-es').forEach(btn => {
+        btn.className = lang === 'es' ? 'btn-lang-es text-marca-secundario font-bold transition' : 'btn-lang-es text-gray-400 hover:text-white transition';
+      });
+      document.querySelectorAll('.btn-lang-en').forEach(btn => {
+        btn.className = lang === 'en' ? 'btn-lang-en text-marca-secundario font-bold transition' : 'btn-lang-en text-gray-400 hover:text-white transition';
+      });
+      document.querySelectorAll('[data-es]').forEach(elemento => {
+        const texto = elemento.getAttribute(`data-${lang}`);
+        if (texto) elemento.textContent = texto;
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const idiomaGuardado = localStorage.getItem('idioma_preferido') || 'es';
+      cambiarIdioma(idiomaGuardado);
+
+      // MENÚ MÓVIL
+      const btnToggle = document.getElementById('btn-menu-toggle');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const iconOpen = document.getElementById('icon-menu-open');
+      const iconClose = document.getElementById('icon-menu-close');
+
+      if (btnToggle && mobileMenu) {
+        btnToggle.addEventListener('click', () => {
+          const menuAbierto = !mobileMenu.classList.contains('hidden');
+          if (menuAbierto) {
+            mobileMenu.classList.add('hidden');
+            iconOpen.classList.remove('hidden');
+            iconClose.classList.add('hidden');
+          } else {
+            mobileMenu.classList.remove('hidden');
+            iconOpen.classList.add('hidden');
+            iconClose.classList.remove('hidden');
+          }
+        });
+      }
+    });
+  </script>
+</body>
+</html>
