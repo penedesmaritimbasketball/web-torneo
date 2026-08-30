@@ -9,12 +9,12 @@
   <!-- Google Fonts: Montserrat -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
   
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- CONFIGURACIÓN DE COLORES PERSONALIZADOS -->
+  <!-- CONFIGURACIÓN DE COLORES DE MARCA -->
   <script>
     tailwind.config = {
       theme: {
@@ -33,7 +33,7 @@
     }
   </script>
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans antialiased selection:bg-marca-secundario selection:text-white">
+<body class="bg-slate-50 text-gray-800 font-sans antialiased selection:bg-marca-secundario selection:text-white">
 
   <!-- ==================== NAVEGACIÓN ADAPTATIVA ==================== -->
   <nav class="bg-marca-oscuro text-white sticky top-0 z-50 shadow-md backdrop-blur-md bg-opacity-95 border-b border-slate-800">
@@ -44,7 +44,7 @@
         <span class="text-base sm:text-lg font-black tracking-wider text-marca-secundario hidden sm:inline">PENEDÈS MARÍTIM BASKETBALL CUP</span>
       </a>
 
-      <div class="hidden md:flex items-center space-x-5 text-sm font-medium">
+      <div class="hidden md:flex items-center space-x-5 text-sm font-semibold">
         <a href="/" class="hover:text-marca-secundario transition duration-200" data-es="Inicio" data-en="Home">Inicio</a>
         <a href="/torneo/" class="hover:text-marca-secundario transition duration-200" data-es="Torneo" data-en="Tournament">Torneo</a>
         <a href="/sedes/" class="hover:text-marca-secundario transition duration-200" data-es="Sedes" data-en="Venues">Sedes</a>
@@ -84,57 +84,101 @@
     </div>
   </nav>
 
-  <!-- ==================== HERO ==================== -->
+  <!-- ==================== HERO DE INSCRIPCIÓN ==================== -->
   <header class="relative text-white py-14 sm:py-20 px-4 overflow-hidden border-b border-slate-800">
     <div class="absolute inset-0 bg-cover bg-center filter brightness-90" style="background-image: url('/heroinscripcion-bg.jpg');"></div>
     <div class="absolute inset-0 bg-marca-principal/85"></div>
 
     <div class="relative z-10 max-w-4xl mx-auto text-center space-y-3">
-      <span class="inline-block bg-white/10 text-marca-acento font-bold px-3 py-1.5 rounded-full text-xs sm:text-sm uppercase tracking-widest border border-white/20 backdrop-blur-sm" data-es="Formulario Oficial 2027" data-en="Official 2027 Form">
-        Formulario Oficial 2027
+      <span class="inline-block bg-white/10 text-marca-acento font-bold px-4 py-1.5 rounded-full text-xs sm:text-sm uppercase tracking-widest border border-white/20 backdrop-blur-sm" data-es="25 al 28 de Marzo 2027" data-en="March 25-28, 2027">
+        25 al 28 de Marzo 2027
       </span>
       <h1 class="text-3xl sm:text-5xl font-black" data-es="Inscripción de Equipos" data-en="Team Registration">
         Inscripción de <span class="text-marca-secundario">Equipos</span>
       </h1>
-      <p class="text-gray-100 text-sm sm:text-base max-w-xl mx-auto" data-es="Rellena los datos para pre-inscribir a tu equipo en el torneo." data-en="Fill in the details to pre-register your team for the tournament.">
-        Rellena los datos para pre-inscribir a tu equipo en el torneo.
+      <p class="text-gray-100 text-sm sm:text-base max-w-xl mx-auto" data-es="Completa el formulario para pre-inscribir a tu club en el torneo." data-en="Fill in the form to pre-register your club for the tournament.">
+        Completa el formulario para pre-inscribir a tu club en el torneo.
       </p>
     </div>
   </header>
 
-  <!-- ==================== BLOQUE DE PACKS EXTRA ==================== -->
-  <section class="max-w-4xl mx-auto px-4 mt-8">
-    <div class="bg-gradient-to-r from-marca-oscuro to-marca-principal text-white p-6 sm:p-8 rounded-3xl shadow-lg border border-slate-700 flex flex-col md:flex-row items-center justify-between gap-6">
-      <div>
-        <span class="inline-block bg-marca-secundario text-white text-xs font-bold px-3 py-1 rounded-full uppercase mb-2" data-es="Servicio Opcional" data-en="Optional Service">Servicio Opcional</span>
-        <h3 class="text-xl font-bold" data-es="¿Necesitas contratar Packs Extra o Acompañantes?" data-en="Do you need Extra Packages or Supporters?">¿Necesitas contratar Packs Extra o Acompañantes?</h3>
-        <p class="text-gray-300 text-sm mt-1" data-es="Reserva traslados, merchandising o alojamientos adicionales en nuestro formulario externo dedicado." data-en="Book transfers, merchandising or additional accommodation in our external dedicated form.">
-          Reserva traslados, merchandising o alojamientos adicionales en nuestro formulario externo dedicado.
-        </p>
+  <!-- ==================== BLOQUE DE PACKS Y EXPERIENCIAS EXTRA (DOSSIER) ==================== -->
+  <section class="max-w-4xl mx-auto px-4 mt-8 sm:mt-12">
+    <div class="bg-gradient-to-br from-marca-oscuro via-marca-principal to-slate-900 text-white rounded-3xl shadow-xl overflow-hidden border border-slate-700 grid grid-cols-1 lg:grid-cols-12">
+      
+      <!-- Foto promocional del dossier -->
+      <div class="lg:col-span-5 relative min-h-[240px] lg:min-h-full bg-cover bg-center" style="background-image: url('/experiencias-extra.jpg');">
+        <div class="absolute inset-0 bg-gradient-to-t from-marca-oscuro via-transparent lg:bg-gradient-to-r lg:from-transparent lg:to-marca-oscuro/90"></div>
+        <span class="absolute top-4 left-4 bg-marca-secundario text-white text-xs font-bold px-3 py-1 rounded-full uppercase shadow" data-es="Experiencias Extra" data-en="Extra Experiences">
+          Experiencias Extra
+        </span>
       </div>
-      <a href="https://forms.google.com/tu-link-de-packs-extra" target="_blank" rel="noopener noreferrer" class="shrink-0 w-full md:w-auto text-center bg-marca-acento hover:bg-yellow-400 text-marca-oscuro font-bold px-6 py-3.5 rounded-xl transition duration-200 text-sm shadow-md" data-es="Abrir Formulario de Packs Extra ↗" data-en="Open Extra Packages Form ↗">
-        Abrir Formulario de Packs Extra ↗
-      </a>
+
+      <!-- Información estructurada según Dossier Oficial -->
+      <div class="lg:col-span-7 p-6 sm:p-8 flex flex-col justify-between space-y-4">
+        <div>
+          <h3 class="text-xl sm:text-2xl font-black text-white mb-2" data-es="Mucho Más que Baloncesto" data-en="Much More than Basketball">
+            Mucho Más que Baloncesto
+          </h3>
+          <p class="text-gray-300 text-xs sm:text-sm leading-relaxed mb-4" data-es="Completa la estancia de tu equipo y acompañantes con nuestros servicios exclusivos:" data-en="Enhance your team and supporters' stay with our exclusive services:">
+            Completa la estancia de tu equipo y acompañantes con nuestros servicios exclusivos:
+          </p>
+          
+          <ul class="space-y-2.5 text-xs sm:text-sm text-gray-200">
+            <li class="flex items-start space-x-2">
+              <span class="text-marca-acento font-bold">✓</span>
+              <span data-es="Entrenamientos Pre y Post Torneo en las instalaciones oficiales OSE." data-en="Pre & Post Tournament Training Sessions at official OSE facilities."><strong>Entrenamientos Pre y Post Torneo</strong> en instalaciones OSE.</span>
+            </li>
+            <li class="flex items-start space-x-2">
+              <span class="text-marca-acento font-bold">✓</span>
+              <span data-es="Tours Culturales y Excursiones: Barcelona & Sagrada Família, PortAventura World (a 35 min), Tarragona Romana y actividades en playa." data-en="Cultural Tours & Excursions: Barcelona & Sagrada Família, PortAventura World (35 min away), Roman Tarragona & Beach activities."><strong>Tours y Excursiones:</strong> Barcelona & Sagrada Família, PortAventura World, Tarragona Romana y Playa.</span>
+            </li>
+            <li class="flex items-start space-x-2">
+              <span class="text-marca-acento font-bold">✓</span>
+              <span data-es="Packs Exclusivos de Alojamiento para Familiares y Afición (Pensión Completa o Media Pensión)." data-en="Exclusive Accommodation Packages for Supporters & Families (Full or Half Board)."><strong>Alojamientos para Afición:</strong> Packs a medida para familias y acompañantes.</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="pt-2 flex flex-col sm:flex-row gap-3">
+          <a href="https://forms.google.com/tu-link-de-packs-extra" target="_blank" rel="noopener noreferrer" class="flex-1 text-center bg-marca-secundario hover:bg-orange-600 text-white font-bold px-5 py-3.5 rounded-xl transition duration-200 text-sm shadow-md" data-es="Solicitar Packs Extra ↗" data-en="Request Extra Packages ↗">
+            Solicitar Packs Extra ↗
+          </a>
+          <a href="https://wa.me/34620073334" target="_blank" rel="noopener noreferrer" class="shrink-0 text-center bg-white/10 hover:bg-white/20 text-white font-semibold px-4 py-3.5 rounded-xl border border-white/20 transition duration-200 text-sm" data-es="Atención Acompañantes 💬" data-en="Supporters Contact 💬">
+            Atención Acompañantes 💬
+          </a>
+        </div>
+      </div>
+
     </div>
   </section>
 
-  <!-- ==================== FORMULARIO DE INSCRIPCIÓN ACTUALIZADO ==================== -->
+  <!-- ==================== FORMULARIO DE INSCRIPCIÓN INTERACTIVO ==================== -->
   <section class="py-10 max-w-4xl mx-auto px-4">
     <div class="bg-white rounded-3xl p-6 sm:p-10 border border-gray-200 shadow-xl">
       
+      <div class="border-b border-gray-200 pb-5 mb-6">
+        <h2 class="text-2xl font-black text-marca-oscuro" data-es="Formulario Oficial de Inscripción" data-en="Official Registration Form">
+          Formulario Oficial de Inscripción
+        </h2>
+        <p class="text-xs sm:text-sm text-gray-500 mt-1" data-es="Los campos marcados con (*) son obligatorios para validar la solicitud." data-en="Fields marked with (*) are required to process the registration.">
+          Los campos marcados con (*) son obligatorios para validar la solicitud.
+        </p>
+      </div>
+
       <!-- Formulario interactivo conectado a Google Sheets -->
       <form id="form-torneo" class="space-y-6">
 
         <!-- Club / Academia -->
         <div>
           <label class="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-2" data-es="Nombre del Club o Academia *" data-en="Club or Academy Name *">Nombre del Club o Academia *</label>
-          <input type="text" id="club" name="club" required placeholder="Ej: CB Barcelona / Youth Academy" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-marca-secundario focus:border-transparent text-sm">
+          <input type="text" id="club" name="club" required placeholder="Ej: CB Barcelona / Youth Academy" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-marca-secundario focus:border-transparent text-sm transition">
         </div>
 
         <!-- Categoría -->
         <div>
           <label class="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-2" data-es="Categoría del Equipo *" data-en="Team Category *">Categoría del Equipo *</label>
-          <select id="categoria" name="categoria" required class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-marca-secundario focus:border-transparent text-sm bg-white">
+          <select id="categoria" name="categoria" required class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-marca-secundario focus:border-transparent text-sm bg-white transition">
             <option value="" data-es="Selecciona una categoría" data-en="Select a category">Selecciona una categoría</option>
             <option value="U14 Masculino">U14 Masculino (Infantil)</option>
             <option value="U14 Femenino">U14 Femenino (Infantil)</option>
@@ -148,20 +192,24 @@
         <!-- Nivel Competitivo -->
         <div>
           <label class="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-2" data-es="Nivel competitivo o Liga en la que compiten *" data-en="Competitive level or League *">Nivel competitivo o Liga en la que compiten *</label>
-          <input type="text" id="nivel" name="nivel" required placeholder="Ej: 1ª División Autonómica / National League" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-marca-secundario focus:border-transparent text-sm">
+          <input type="text" id="nivel" name="nivel" required placeholder="Ej: 1ª División Autonómica / National League" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-marca-secundario focus:border-transparent text-sm transition">
         </div>
 
-        <!-- Grabación de Partido (AHORA OPCIONAL) -->
-        <div>
-          <label class="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-2" data-es="Grabación de partido - Link (Opcional)" data-en="Game Recording - Link (Optional)">Grabación de partido - Link (Opcional)</label>
-          <input type="url" id="videoUrl" name="videoUrl" placeholder="https://youtube.com/watch?v=... o VEO/Drive" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-marca-secundario focus:border-transparent text-sm">
-          <p class="text-xs text-gray-500 mt-1.5" data-es="Enlace a YouTube, Vimeo, Veo o Google Drive (acceso público)." data-en="Link to YouTube, Vimeo, Veo or Google Drive (public access).">Enlace a YouTube, Vimeo, Veo o Google Drive (acceso público).</p>
+        <!-- Grabación de Partido (AHORA TOTALMENTE OPCIONAL) -->
+        <div class="bg-slate-50 p-4 rounded-2xl border border-slate-200">
+          <label class="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-1" data-es="Grabación de partido - Link (Opcional)" data-en="Game Recording - Link (Optional)">
+            Grabación de partido - Link (Opcional)
+          </label>
+          <input type="url" id="videoUrl" name="videoUrl" placeholder="https://youtube.com/watch?v=... o VEO/Drive" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-marca-secundario focus:border-transparent text-sm bg-white transition">
+          <p class="text-xs text-gray-500 mt-2" data-es="Enlace público a YouTube, Vimeo, Veo o Google Drive para evaluar encuadre del grupo." data-en="Public link to YouTube, Vimeo, Veo or Google Drive to assess team group placement.">
+            Enlace público a YouTube, Vimeo, Veo o Google Drive para evaluar encuadre del grupo.
+          </p>
         </div>
 
         <!-- ¿Más equipos? -->
         <div>
           <label class="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-2" data-es="¿Estáis interesados en inscribir más equipos del mismo club? *" data-en="Are you interested in registering more teams from the same club? *">¿Estáis interesados en inscribir más equipos del mismo club? *</label>
-          <select id="masEquipos" name="masEquipos" required class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-marca-secundario focus:border-transparent text-sm bg-white">
+          <select id="masEquipos" name="masEquipos" required class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-marca-secundario focus:border-transparent text-sm bg-white transition">
             <option value="Sí / Yes" data-es="Sí / Yes" data-en="Yes / Sí">Sí / Yes</option>
             <option value="No / No" data-es="No / No" data-en="No / No">No / No</option>
           </select>
@@ -169,49 +217,53 @@
 
         <hr class="border-gray-200 my-6">
 
-        <h3 class="text-lg font-bold text-marca-oscuro mb-4" data-es="Datos de Contacto" data-en="Contact Details">Datos de Contacto</h3>
+        <h3 class="text-base font-bold text-marca-oscuro uppercase tracking-wider mb-2" data-es="Datos del Responsable / Contacto" data-en="Contact Person Details">
+          Datos del Responsable / Contacto
+        </h3>
 
         <!-- Datos de Contacto -->
         <div>
           <label class="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-2" data-es="Persona de contacto del club *" data-en="Club Contact Person *">Persona de contacto del club *</label>
-          <input type="text" id="contacto" name="contacto" required placeholder="Nombre y Apellidos" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-marca-secundario focus:border-transparent text-sm">
+          <input type="text" id="contacto" name="contacto" required placeholder="Nombre y Apellidos" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-marca-secundario focus:border-transparent text-sm transition">
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
           <div>
             <label class="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-2" data-es="Número de teléfono *" data-en="Phone Number *">Número de teléfono *</label>
-            <input type="tel" id="telefono" name="telefono" required placeholder="+34 600 000 000" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-marca-secundario focus:border-transparent text-sm">
+            <input type="tel" id="telefono" name="telefono" required placeholder="+34 600 000 000" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-marca-secundario focus:border-transparent text-sm transition">
           </div>
           <div>
             <label class="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-2" data-es="Correo electrónico *" data-en="Email Address *">Correo electrónico *</label>
-            <input type="email" id="email" name="email" required placeholder="contacto@club.com" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-marca-secundario focus:border-transparent text-sm">
+            <input type="email" id="email" name="email" required placeholder="contacto@club.com" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-marca-secundario focus:border-transparent text-sm transition">
           </div>
         </div>
 
-        <!-- Botón Enviar -->
-        <button type="submit" id="btn-submit" class="w-full bg-marca-secundario hover:bg-opacity-90 text-white font-black py-4 rounded-xl text-base transition-all duration-300 shadow-lg mt-4 cursor-pointer" data-es="Enviar Inscripción" data-en="Submit Registration">
-          Enviar Inscripción
+        <!-- Botón Enviar con animación interactiva -->
+        <button type="submit" id="btn-submit" class="w-full bg-marca-secundario hover:bg-orange-600 text-white font-black py-4 rounded-xl text-base transition-all duration-300 shadow-lg mt-4 cursor-pointer flex justify-center items-center space-x-2" data-es="Enviar Pre-Inscripción" data-en="Submit Pre-Registration">
+          <span>Enviar Pre-Inscripción</span>
         </button>
 
-        <!-- Estado de envío -->
-        <p id="mensaje-estado" class="text-center text-sm font-bold hidden mt-4"></p>
+        <!-- Mensajes dinámicos de estado del envío -->
+        <div id="mensaje-estado" class="hidden p-4 rounded-xl text-center text-sm font-bold border transition-all duration-300"></div>
+
       </form>
 
     </div>
   </section>
 
-  <!-- ==================== COLABORADORES & FOOTER ==================== -->
+  <!-- ==================== ORGANIZAN & COLABORAN ==================== -->
   <section class="bg-slate-900 py-10 sm:py-12 border-t border-slate-800">
     <div class="max-w-7xl mx-auto px-4 text-center">
       <p class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-6 sm:mb-8" data-es="Organizan y Colaboran" data-en="Organized and Supported by">Organizan y Colaboran</p>
       <div class="flex flex-wrap justify-center items-center gap-8 sm:gap-16">
-        <div class="p-2 transition-all duration-300 hover:-translate-y-1 hover:scale-105"><img src="/logoose.svg" alt="OSE Barcelona" class="h-12 sm:h-20 w-auto object-contain"></div>
-        <div class="p-2 transition-all duration-300 hover:-translate-y-1 hover:scale-105"><img src="/logocunit.svg" alt="A.B. Cunit" class="h-12 sm:h-20 w-auto object-contain"></div>
-        <div class="p-2 transition-all duration-300 hover:-translate-y-1 hover:scale-105"><img src="/logocube.svg" alt="C.B. Cubelles" class="h-12 sm:h-20 w-auto object-contain"></div>
+        <div class="p-2 transition-all duration-300 hover:scale-105"><img src="/logoose.svg" alt="OSE Barcelona" class="h-12 sm:h-20 w-auto object-contain"></div>
+        <div class="p-2 transition-all duration-300 hover:scale-105"><img src="/logocunit.svg" alt="A.B. Cunit" class="h-12 sm:h-20 w-auto object-contain"></div>
+        <div class="p-2 transition-all duration-300 hover:scale-105"><img src="/logocube.svg" alt="C.B. Cubelles" class="h-12 sm:h-20 w-auto object-contain"></div>
       </div>
     </div>
   </section>
 
+  <!-- ==================== FOOTER ==================== -->
   <footer class="bg-slate-950 text-gray-500 py-8 text-center text-xs border-t border-slate-800">
     <div class="max-w-7xl mx-auto px-4">
       <img src="/PenedesMaritimCuplogo.svg" alt="Logo Penedès Marítim Cup" class="h-8 w-auto mx-auto mb-3">
@@ -220,11 +272,12 @@
     </div>
   </footer>
 
-  <!-- ==================== SCRIPTS LOGICA & IDIOMA ==================== -->
+  <!-- ==================== LÓGICA INTERACTIVA & IDIOMAS (JS) ==================== -->
   <script>
-    // SUSTITUYE ESTA URL POR LA WEB APP URL DE TU GOOGLE APPS SCRIPT
+    // URL DE GOOGLE APPS SCRIPT / GOOGLE SHEETS
     const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/TU_SCRIPT_ID_AQUI/exec';
 
+    // INTERACCIÓN DE ENVÍO DE FORMULARIO
     document.getElementById('form-torneo').addEventListener('submit', function(e) {
       e.preventDefault();
       
@@ -232,8 +285,16 @@
       const msg = document.getElementById('mensaje-estado');
       const idiomaActual = localStorage.getItem('idioma_preferido') || 'es';
 
+      // Estado de Carga
       btn.disabled = true;
-      btn.textContent = idiomaActual === 'es' ? 'Enviando...' : 'Submitting...';
+      btn.classList.add('opacity-75', 'cursor-not-allowed');
+      btn.innerHTML = `
+        <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+          <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+          <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+        </svg>
+        <span>${idiomaActual === 'es' ? 'Procesando envío...' : 'Submitting...'}</span>
+      `;
 
       const formData = new FormData(this);
 
@@ -242,27 +303,29 @@
         body: formData
       })
       .then(res => {
-        msg.classList.remove('hidden', 'text-red-600');
-        msg.classList.add('text-green-600');
+        msg.classList.remove('hidden', 'bg-red-50', 'text-red-700', 'border-red-200');
+        msg.classList.add('bg-green-50', 'text-green-800', 'border-green-200');
         msg.textContent = idiomaActual === 'es' 
-          ? '¡Inscripción enviada correctamente! Nos pondremos en contacto muy pronto.' 
-          : 'Registration successfully submitted! We will contact you shortly.';
+          ? '¡Solicitud recibida con éxito! Revisaremos los datos y nos pondremos en contacto.' 
+          : 'Registration received successfully! We will review your details and contact you shortly.';
         this.reset();
       })
       .catch(err => {
-        msg.classList.remove('hidden', 'text-green-600');
-        msg.classList.add('text-red-600');
+        msg.classList.remove('hidden', 'bg-green-50', 'text-green-800', 'border-green-200');
+        msg.classList.add('bg-red-50', 'text-red-700', 'border-red-200');
         msg.textContent = idiomaActual === 'es' 
-          ? 'Hubo un error al enviar. Por favor, escríbenos a penedes.maritim.basketball@gmail.com' 
-          : 'An error occurred. Please contact us at penedes.maritim.basketball@gmail.com';
+          ? 'Ocurrió un problema al enviar. Escríbenos directamente a penedes.maritim.basketball@gmail.com' 
+          : 'Submission error. Please email us directly at penedes.maritim.basketball@gmail.com';
       })
       .finally(() => {
         btn.disabled = false;
-        btn.textContent = idiomaActual === 'es' ? 'Enviar Inscripción' : 'Submit Registration';
+        btn.classList.remove('opacity-75', 'cursor-not-allowed');
+        btn.innerHTML = `<span>${idiomaActual === 'es' ? 'Enviar Pre-Inscripción' : 'Submit Pre-Registration'}</span>`;
+        msg.scrollIntoView({ behavior: 'smooth', block: 'center' });
       });
     });
 
-    // SISTEMA DE IDIOMA DINÁMICO
+    // SISTEMA DE IDIOMA DINÁMICO (ES / EN)
     function cambiarIdioma(lang) {
       localStorage.setItem('idioma_preferido', lang);
       document.querySelectorAll('.btn-lang-es').forEach(btn => {
@@ -277,11 +340,11 @@
       });
     }
 
+    // MENÚ DESPLEGABLE MÓVIL Y CONFIGURACIÓN INICIAL
     document.addEventListener('DOMContentLoaded', () => {
       const idiomaGuardado = localStorage.getItem('idioma_preferido') || 'es';
       cambiarIdioma(idiomaGuardado);
 
-      // MENÚ MÓVIL
       const btnToggle = document.getElementById('btn-menu-toggle');
       const mobileMenu = document.getElementById('mobile-menu');
       const iconOpen = document.getElementById('icon-menu-open');
