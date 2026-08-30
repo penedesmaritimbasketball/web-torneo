@@ -102,49 +102,56 @@
     </div>
   </header>
 
-  <!-- ==================== BLOQUE DE PACKS Y EXPERIENCIAS EXTRA (DOSSIER) ==================== -->
+  <!-- ==================== BLOQUE DE PACKS Y EXPERIENCIAS EXTRA (INTERACTIVO/HOVER) ==================== -->
   <section class="max-w-4xl mx-auto px-4 mt-8 sm:mt-12">
-    <div class="bg-gradient-to-br from-marca-oscuro via-marca-principal to-slate-900 text-white rounded-3xl shadow-xl overflow-hidden border border-slate-700 grid grid-cols-1 lg:grid-cols-12">
+    <!-- Contenedor con efecto interactivo hover (Elevación 3D, Glow de Sombra y Borde Dinámico) -->
+    <div class="group bg-gradient-to-br from-marca-oscuro via-marca-principal to-slate-900 text-white rounded-3xl shadow-xl hover:shadow-2xl hover:shadow-marca-secundario/20 overflow-hidden border border-slate-700 hover:border-marca-secundario/50 grid grid-cols-1 lg:grid-cols-12 transition-all duration-500 ease-out hover:-translate-y-2">
       
-      <!-- Foto promocional del dossier -->
-      <div class="lg:col-span-5 relative min-h-[240px] lg:min-h-full bg-cover bg-center" style="background-image: url('/experiencias-extra.jpg');">
-        <div class="absolute inset-0 bg-gradient-to-t from-marca-oscuro via-transparent lg:bg-gradient-to-r lg:from-transparent lg:to-marca-oscuro/90"></div>
-        <span class="absolute top-4 left-4 bg-marca-secundario text-white text-xs font-bold px-3 py-1 rounded-full uppercase shadow" data-es="Experiencias Extra" data-en="Extra Experiences">
+      <!-- Foto promocional con efecto Zoom al hacer Hover -->
+      <div class="lg:col-span-5 relative min-h-[250px] lg:min-h-full overflow-hidden">
+        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 ease-out group-hover:scale-110" style="background-image: url('/experiencias-extra.jpg');"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-marca-oscuro via-slate-900/40 to-transparent lg:bg-gradient-to-r lg:from-transparent lg:via-marca-oscuro/40 lg:to-marca-oscuro"></div>
+        
+        <span class="absolute top-4 left-4 bg-marca-secundario text-white text-xs font-bold px-3 py-1 rounded-full uppercase shadow-lg transition-transform duration-300 group-hover:scale-105" data-es="Experiencias Extra" data-en="Extra Experiences">
           Experiencias Extra
         </span>
       </div>
 
-      <!-- Información estructurada según Dossier Oficial -->
+      <!-- Información estructurada con micro-interacciones -->
       <div class="lg:col-span-7 p-6 sm:p-8 flex flex-col justify-between space-y-4">
         <div>
-          <h3 class="text-xl sm:text-2xl font-black text-white mb-2" data-es="Mucho Más que Baloncesto" data-en="Much More than Basketball">
+          <h3 class="text-xl sm:text-2xl font-black text-white mb-2 transition-colors duration-300 group-hover:text-marca-acento" data-es="Mucho Más que Baloncesto" data-en="Much More than Basketball">
             Mucho Más que Baloncesto
           </h3>
           <p class="text-gray-300 text-xs sm:text-sm leading-relaxed mb-4" data-es="Completa la estancia de tu equipo y acompañantes con nuestros servicios exclusivos:" data-en="Enhance your team and supporters' stay with our exclusive services:">
             Completa la estancia de tu equipo y acompañantes con nuestros servicios exclusivos:
           </p>
           
-          <ul class="space-y-2.5 text-xs sm:text-sm text-gray-200">
-            <li class="flex items-start space-x-2">
-              <span class="text-marca-acento font-bold">✓</span>
+          <ul class="space-y-3 text-xs sm:text-sm text-gray-200">
+            <!-- Item 1 -->
+            <li class="flex items-start space-x-2.5 transition-transform duration-300 hover:translate-x-1.5 cursor-default">
+              <span class="text-marca-acento font-bold text-base leading-none">✓</span>
               <span data-es="Entrenamientos Pre y Post Torneo en las instalaciones oficiales OSE." data-en="Pre & Post Tournament Training Sessions at official OSE facilities."><strong>Entrenamientos Pre y Post Torneo</strong> en instalaciones OSE.</span>
             </li>
-            <li class="flex items-start space-x-2">
-              <span class="text-marca-acento font-bold">✓</span>
+            <!-- Item 2 -->
+            <li class="flex items-start space-x-2.5 transition-transform duration-300 hover:translate-x-1.5 cursor-default">
+              <span class="text-marca-acento font-bold text-base leading-none">✓</span>
               <span data-es="Tours Culturales y Excursiones: Barcelona & Sagrada Família, PortAventura World (a 35 min), Tarragona Romana y actividades en playa." data-en="Cultural Tours & Excursions: Barcelona & Sagrada Família, PortAventura World (35 min away), Roman Tarragona & Beach activities."><strong>Tours y Excursiones:</strong> Barcelona & Sagrada Família, PortAventura World, Tarragona Romana y Playa.</span>
             </li>
-            <li class="flex items-start space-x-2">
-              <span class="text-marca-acento font-bold">✓</span>
+            <!-- Item 3 -->
+            <li class="flex items-start space-x-2.5 transition-transform duration-300 hover:translate-x-1.5 cursor-default">
+              <span class="text-marca-acento font-bold text-base leading-none">✓</span>
               <span data-es="Packs Exclusivos de Alojamiento para Familiares y Afición (Pensión Completa o Media Pensión)." data-en="Exclusive Accommodation Packages for Supporters & Families (Full or Half Board)."><strong>Alojamientos para Afición:</strong> Packs a medida para familias y acompañantes.</span>
             </li>
           </ul>
         </div>
 
-        <div class="pt-2 flex flex-col sm:flex-row gap-3">
-          <a href="https://forms.google.com/tu-link-de-packs-extra" target="_blank" rel="noopener noreferrer" class="flex-1 text-center bg-marca-secundario hover:bg-orange-600 text-white font-bold px-5 py-3.5 rounded-xl transition duration-200 text-sm shadow-md" data-es="Solicitar Packs Extra ↗" data-en="Request Extra Packages ↗">
+        <!-- Botones Interactivos -->
+        <div class="pt-3 flex flex-col sm:flex-row gap-3">
+          <a href="https://forms.google.com/tu-link-de-packs-extra" target="_blank" rel="noopener noreferrer" class="flex-1 text-center bg-marca-secundario hover:bg-orange-600 text-white font-bold px-5 py-3.5 rounded-xl transition-all duration-300 text-sm shadow-md hover:shadow-orange-500/30 hover:scale-[1.02]" data-es="Solicitar Packs Extra ↗" data-en="Request Extra Packages ↗">
             Solicitar Packs Extra ↗
           </a>
-          <a href="https://wa.me/34620073334" target="_blank" rel="noopener noreferrer" class="shrink-0 text-center bg-white/10 hover:bg-white/20 text-white font-semibold px-4 py-3.5 rounded-xl border border-white/20 transition duration-200 text-sm" data-es="Atención Acompañantes 💬" data-en="Supporters Contact 💬">
+          <a href="https://wa.me/34620073334" target="_blank" rel="noopener noreferrer" class="shrink-0 text-center bg-white/10 hover:bg-white/20 text-white font-semibold px-4 py-3.5 rounded-xl border border-white/20 hover:border-white/40 transition-all duration-300 text-sm hover:scale-[1.02]" data-es="Atención Acompañantes 💬" data-en="Supporters Contact 💬">
             Atención Acompañantes 💬
           </a>
         </div>
@@ -195,7 +202,7 @@
           <input type="text" id="nivel" name="nivel" required placeholder="Ej: 1ª División Autonómica / National League" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-marca-secundario focus:border-transparent text-sm transition">
         </div>
 
-        <!-- Grabación de Partido (AHORA TOTALMENTE OPCIONAL) -->
+        <!-- Grabación de Partido (TOTALMENTE OPCIONAL) -->
         <div class="bg-slate-50 p-4 rounded-2xl border border-slate-200">
           <label class="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-1" data-es="Grabación de partido - Link (Opcional)" data-en="Game Recording - Link (Optional)">
             Grabación de partido - Link (Opcional)
@@ -327,6 +334,7 @@
 
     // SISTEMA DE IDIOMA DINÁMICO (ES / EN)
     function cambiarIdioma(lang) {
+      localStorage.getItem('idioma_preferido');
       localStorage.setItem('idioma_preferido', lang);
       document.querySelectorAll('.btn-lang-es').forEach(btn => {
         btn.className = lang === 'es' ? 'btn-lang-es text-marca-secundario font-bold transition' : 'btn-lang-es text-gray-400 hover:text-white transition';
