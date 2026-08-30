@@ -84,7 +84,7 @@
     </div>
   </nav>
 
-  <!-- ==================== HERO DE SECCIÓN ==================== -->
+  <!-- ==================== HERO DE SECCIÓN (CORREGIDO TITULAR) ==================== -->
   <header class="relative text-white py-16 sm:py-24 px-4 overflow-hidden border-b border-slate-800">
     <div class="absolute inset-0 bg-cover bg-center filter brightness-90" style="background-image: url('/herosedes-bg.jpg');"></div>
     <div class="absolute inset-0 bg-marca-principal/85"></div>
@@ -94,8 +94,9 @@
         Atención a Clubes & Equipos
       </span>
       
-      <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight" data-es="Contacto y Preguntas Frecuentes" data-en="Contact & FAQs">
-        Contacto y <span class="text-marca-secundario">FAQ</span>
+      <!-- TITULAR UNIFICADO Y SIN DUPLICADOS -->
+      <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight" data-es="Contacto & FAQ" data-en="Contact & FAQ">
+        Contacto & <span class="text-marca-secundario">FAQ</span>
       </h1>
       
       <p class="text-gray-100 max-w-2xl mx-auto text-sm sm:text-lg leading-relaxed" data-es="¿Tienes alguna duda sobre inscripciones, alojamiento o la normativa del torneo? Estamos aquí para ayudarte a planificar la experiencia de tu equipo." data-en="Have questions about registration, accommodation, or tournament rules? We're here to help you plan your team's experience.">
@@ -104,7 +105,7 @@
     </div>
   </header>
 
-  <!-- ==================== SECCIÓN PRINCIPAL: CANALES DIRECTOS + FORMULARIO ==================== -->
+  <!-- ==================== CANALES DIRECTOS + FORMULARIO ==================== -->
   <section class="py-12 sm:py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid lg:grid-cols-12 gap-8 items-start">
       
@@ -144,7 +145,7 @@
             </div>
           </div>
 
-          <!-- Card Sedes Principales -->
+          <!-- Card Sedes -->
           <div class="bg-white p-5 rounded-2xl border border-gray-200 shadow-sm flex items-start space-x-4 transition-all duration-300 hover:border-marca-principal hover:shadow-md">
             <div class="p-3 bg-slate-100 text-marca-oscuro rounded-xl shrink-0">
               <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
@@ -169,36 +170,31 @@
           Completa los datos del formulario y te responderemos a la mayor brevedad posible.
         </p>
 
-        <!-- Formulario con manejo JS -->
         <form id="contact-form" onsubmit="enviarFormularioContacto(event)" class="space-y-4">
           <div class="grid sm:grid-cols-2 gap-4">
             
-            <!-- Nombre -->
             <div>
               <label for="nombre" class="block text-xs font-bold text-marca-oscuro uppercase tracking-wider mb-1" data-es="Nombre Completo *" data-en="Full Name *">Nombre Completo *</label>
-              <input type="text" id="nombre" required placeholder="Ej. Carlos Gómez" class="w-full bg-slate-50 border border-gray-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-marca-secundario focus:bg-white transition">
+              <input type="text" id="nombre" name="nombre" required placeholder="Ej. Carlos Gómez" class="w-full bg-slate-50 border border-gray-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-marca-secundario focus:bg-white transition">
             </div>
 
-            <!-- Email -->
             <div>
               <label for="email" class="block text-xs font-bold text-marca-oscuro uppercase tracking-wider mb-1" data-es="Correo Electrónico *" data-en="Email Address *">Correo Electrónico *</label>
-              <input type="email" id="email" required placeholder="ejemplo@club.com" class="w-full bg-slate-50 border border-gray-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-marca-secundario focus:bg-white transition">
+              <input type="email" id="email" name="email" required placeholder="ejemplo@club.com" class="w-full bg-slate-50 border border-gray-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-marca-secundario focus:bg-white transition">
             </div>
 
           </div>
 
           <div class="grid sm:grid-cols-2 gap-4">
             
-            <!-- Club / Entidad -->
             <div>
               <label for="club" class="block text-xs font-bold text-marca-oscuro uppercase tracking-wider mb-1" data-es="Club u Organización" data-en="Club or Organization">Club u Organización</label>
-              <input type="text" id="club" placeholder="Ej. Basket Club Cunit" class="w-full bg-slate-50 border border-gray-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-marca-secundario focus:bg-white transition">
+              <input type="text" id="club" name="club" placeholder="Ej. Basket Club Cunit" class="w-full bg-slate-50 border border-gray-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-marca-secundario focus:bg-white transition">
             </div>
 
-            <!-- Motivo de Consulta -->
             <div>
               <label for="asunto" class="block text-xs font-bold text-marca-oscuro uppercase tracking-wider mb-1" data-es="Motivo de la Consulta *" data-en="Subject *">Motivo de la Consulta *</label>
-              <select id="asunto" required class="w-full bg-slate-50 border border-gray-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-marca-secundario focus:bg-white transition">
+              <select id="asunto" name="asunto" required class="w-full bg-slate-50 border border-gray-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-marca-secundario focus:bg-white transition">
                 <option value="inscripcion" data-es="Información sobre Inscripciones" data-en="Registration Information">Información sobre Inscripciones</option>
                 <option value="alojamiento" data-es="Dudas de Alojamiento y Hoteles" data-en="Accommodation & Hotel Questions">Dudas de Alojamiento y Hoteles</option>
                 <option value="normativa" data-es="Normativa del Torneo y Calendarios" data-en="Tournament Rules & Schedules">Normativa del Torneo y Calendarios</option>
@@ -208,19 +204,16 @@
 
           </div>
 
-          <!-- Mensaje -->
           <div>
             <label for="mensaje" class="block text-xs font-bold text-marca-oscuro uppercase tracking-wider mb-1" data-es="Tu Mensaje *" data-en="Your Message *">Tu Mensaje *</label>
-            <textarea id="mensaje" rows="4" required placeholder="Escribe aquí los detalles de tu consulta..." class="w-full bg-slate-50 border border-gray-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-marca-secundario focus:bg-white transition"></textarea>
+            <textarea id="mensaje" name="mensaje" rows="4" required placeholder="Escribe aquí los detalles de tu consulta..." class="w-full bg-slate-50 border border-gray-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-marca-secundario focus:bg-white transition"></textarea>
           </div>
 
-          <!-- Botón Enviar -->
-          <button type="submit" id="btn-submit-contact" class="w-full bg-marca-secundario hover:bg-opacity-95 text-white font-bold py-3.5 px-6 rounded-xl transition duration-300 shadow-md hover:-translate-y-0.5 active:scale-95 text-sm flex items-center justify-center space-x-2">
+          <button type="submit" id="btn-submit-contact" class="w-full bg-marca-secundario hover:bg-opacity-90 active:scale-95 text-white font-bold py-3.5 px-6 rounded-xl transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-0.5 text-sm flex items-center justify-center space-x-2">
             <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
             <span data-es="Enviar Consulta" data-en="Send Message">Enviar Consulta</span>
           </button>
 
-          <!-- Mensaje de Feedback -->
           <div id="form-feedback" class="hidden p-4 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-300"></div>
 
         </form>
@@ -244,7 +237,7 @@
       <div class="space-y-3" id="faq-accordion">
         
         <!-- FAQ 1 -->
-        <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm transition-all duration-200">
+        <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm transition-all duration-200 hover:border-marca-principal/40">
           <button onclick="toggleFaq(1)" class="w-full text-left p-5 flex justify-between items-center space-x-4 focus:outline-none">
             <span class="font-bold text-marca-oscuro text-sm sm:text-base flex items-center" data-es="¿Cuál es la fecha límite para realizar la inscripción?" data-en="What is the registration deadline?">
               <svg class="w-5 h-5 text-marca-secundario mr-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
@@ -258,7 +251,7 @@
         </div>
 
         <!-- FAQ 2 -->
-        <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm transition-all duration-200">
+        <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm transition-all duration-200 hover:border-marca-principal/40">
           <button onclick="toggleFaq(2)" class="w-full text-left p-5 flex justify-between items-center space-x-4 focus:outline-none">
             <span class="font-bold text-marca-oscuro text-sm sm:text-base flex items-center" data-es="¿Qué incluye la opción de alojamiento en hoteles 3 estrellas?" data-en="What is included in the 3-star hotel package?">
               <svg class="w-5 h-5 text-marca-secundario mr-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5m0 0v-5a2 2 0 012-2h2a2 2 0 012 2v5m-6 0h6"/></svg>
@@ -272,7 +265,7 @@
         </div>
 
         <!-- FAQ 3 -->
-        <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm transition-all duration-200">
+        <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm transition-all duration-200 hover:border-marca-principal/40">
           <button onclick="toggleFaq(3)" class="w-full text-left p-5 flex justify-between items-center space-x-4 focus:outline-none">
             <span class="font-bold text-marca-oscuro text-sm sm:text-base flex items-center" data-es="¿Cuántos partidos garantiza cada equipo participante?" data-en="How many games is each participating team guaranteed?">
               <svg class="w-5 h-5 text-marca-secundario mr-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
@@ -286,7 +279,7 @@
         </div>
 
         <!-- FAQ 4 -->
-        <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm transition-all duration-200">
+        <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm transition-all duration-200 hover:border-marca-principal/40">
           <button onclick="toggleFaq(4)" class="w-full text-left p-5 flex justify-between items-center space-x-4 focus:outline-none">
             <span class="font-bold text-marca-oscuro text-sm sm:text-base flex items-center" data-es="¿Cómo se gestiona la llegada desde el aeropuerto o la estación de tren?" data-en="How are arrivals from the airport or train station managed?">
               <svg class="w-5 h-5 text-marca-secundario mr-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/></svg>
@@ -301,10 +294,11 @@
 
       </div>
 
-      <div class="text-center mt-8">
-        <a href="/inscripcion/" class="inline-flex items-center space-x-2 bg-marca-principal hover:bg-opacity-95 text-white font-bold px-6 py-3 rounded-xl text-xs sm:text-sm transition duration-300 shadow-md">
+      <!-- BOTÓN CON ANIMACIÓN Y ELEVACIÓN ACTUALIZADA -->
+      <div class="text-center mt-10">
+        <a href="/inscripcion/" class="inline-flex items-center space-x-2 bg-marca-principal hover:bg-marca-secundario text-white font-bold px-7 py-3.5 rounded-xl text-xs sm:text-sm transition-all duration-300 shadow-md hover:shadow-xl hover:-translate-y-1 active:scale-95 group">
           <span data-es="¿Todo claro? Ir a Inscripciones" data-en="All clear? Go to Registration">¿Todo claro? Ir a Inscripciones</span>
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
         </a>
       </div>
 
@@ -343,11 +337,11 @@
       if (content && icon) {
         const estaAbierto = !content.classList.contains('hidden');
         
-        // Cerrar todos
+        // Cerrar todos los acordeones
         document.querySelectorAll('[id^="faq-content-"]').forEach(el => el.classList.add('hidden'));
         document.querySelectorAll('[id^="faq-icon-"]').forEach(el => el.classList.remove('rotate-180'));
 
-        // Abrir si no estaba abierto
+        // Abrir si no estaba desplegado
         if (!estaAbierto) {
           content.classList.remove('hidden');
           icon.classList.add('rotate-180');
@@ -355,30 +349,56 @@
       }
     }
 
-    // MANEJO ENVÍO FORMULARIO DE CONTACTO
+    // Pega aquí la URL que te dio Google Apps Script en el Paso 2
+    const SCRIPT_URL_CONTACTO = 'https://script.google.com/macros/s/AKfycbzltFL9QghnPPur287WCzt9q9V7c8_gGHSUYlL0f4yHNZgzUNLVqcyzAgFskLhjF99V/exec';
+
     function enviarFormularioContacto(e) {
-      e.preventDefault();
-      const btn = document.getElementById('btn-submit-contact');
-      const feedback = document.getElementById('form-feedback');
+    e.preventDefault();
+    const btn = document.getElementById('btn-submit-contact');
+    const feedback = document.getElementById('form-feedback');
 
-      btn.disabled = true;
-      btn.classList.add('opacity-75');
+    btn.disabled = true;
+    btn.classList.add('opacity-75');
 
-      setTimeout(() => {
+    const payload = {
+        nombre: document.getElementById('nombre').value,
+        email: document.getElementById('email').value,
+        club: document.getElementById('club').value,
+        asunto: document.getElementById('asunto').value,
+        mensaje: document.getElementById('mensaje').value
+    };
+
+    fetch(SCRIPT_URL_CONTACTO, {
+        method: 'POST',
+        mode: 'no-cors', // Evita bloqueos de CORS estándar en Google Apps Script
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+    })
+    .then(() => {
         feedback.classList.remove('hidden', 'bg-red-100', 'text-red-700');
         feedback.classList.add('bg-green-100', 'text-green-800', 'border', 'border-green-300');
         
         feedback.textContent = idiomaActual === 'es' 
-          ? '✔ ¡Mensaje enviado con éxito! Nos pondremos en contacto con tu club en menos de 24h.' 
-          : '✔ Message sent successfully! We will get in touch with your club in less than 24h.';
+        ? '✔ ¡Mensaje enviado con éxito! Nos pondremos en contacto con tu club en menos de 24h.' 
+        : '✔ Message sent successfully! We will get in touch with your club in less than 24h.';
 
         document.getElementById('contact-form').reset();
+    })
+    .catch(error => {
+        feedback.classList.remove('hidden', 'bg-green-100', 'text-green-800');
+        feedback.classList.add('bg-red-100', 'text-red-700', 'border', 'border-red-300');
+        
+        feedback.textContent = idiomaActual === 'es'
+        ? '✕ Hubo un error al enviar el mensaje. Por favor, inténtalo de nuevo.'
+        : '✕ Error sending message. Please try again.';
+    })
+    .finally(() => {
         btn.disabled = false;
         btn.classList.remove('opacity-75');
-      }, 800);
+    });
     }
 
-    // SISTEMA DE IDIOMA DINÁMICO
+    // SISTEMA DE CAMBIO DE IDIOMA
     function cambiarIdioma(lang) {
       idiomaActual = lang;
       localStorage.setItem('idioma_preferido', lang);
@@ -396,7 +416,6 @@
           if (elemento.children.length === 0) {
             elemento.textContent = texto;
           } else {
-            // Preservar subelementos como SVGs si los hay
             const spanText = elemento.querySelector('span:not([data-es])') || elemento.querySelector('span[data-es]');
             if (spanText) {
               spanText.textContent = texto;
