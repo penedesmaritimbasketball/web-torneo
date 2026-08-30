@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sedes y Entorno - Penedès Marítim Basketball Cup 2027</title>
+  <link rel="icon" type="image/svg+xml" href="/PenedesMaritimCuplogo.svg">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Montserrat', 'sans-serif'] },
+          colors: {
+            marca: {
+              principal: '#173A7D',
+              secundario: '#F36B21',
+              oscuro: '#061B36',
+              acento: '#FFC928',
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased selection:bg-marca-secundario selection:text-white">
+
+  <!-- NAVEGACIÓN -->
+  <nav class="bg-marca-oscuro text-white sticky top-0 z-50 shadow-md backdrop-blur-md bg-opacity-95 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+      <a href="/" class="flex items-center space-x-3">
+        <img src="/PenedesMaritimCuplogo.svg" alt="Logo Penedès Marítim Cup" class="h-10 w-auto">
+        <span class="text-lg font-black tracking-wider text-marca-acento hidden sm:inline">PENEDÈS MARÍTIM BASKETBALL CUP</span>
+      </a>
+      <div class="flex items-center space-x-4 md:space-x-6 text-sm font-medium">
+        <a href="/" class="hover:text-marca-acento transition">Inicio</a>
+        <a href="/torneo/" class="hover:text-marca-acento transition">Torneo</a>
+        <a href="/sedes/" class="text-marca-secundario font-bold border-b-2 border-marca-secundario pb-0.5">Sedes</a>
+        <a href="/inscripcion/" class="bg-marca-secundario hover:bg-opacity-90 text-white px-4 py-2 rounded-xl transition font-semibold shadow-md">Inscribirse</a>
+        <a href="/contacto/" class="hover:text-marca-acento transition">Contacto</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- CABECERA -->
+  <header class="bg-marca-oscuro text-white py-16 border-b border-slate-800 text-center">
+    <div class="max-w-7xl mx-auto px-4">
+      <span class="text-marca-acento font-bold uppercase tracking-widest text-xs">Costa Daurada & Garraf</span>
+      <h1 class="text-4xl sm:text-5xl font-black mt-2">Nuestras Sedes e Instalaciones</h1>
+      <p class="text-gray-300 max-w-2xl mx-auto mt-4 text-sm sm:text-base">Un entorno privilegiado junto al mar Mediterráneo, a solo 45 minutos de Barcelona.</p>
+    </div>
+  </header>
+
+  <!-- MAPA DE LOCALIZACIÓN -->
+  <section class="py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="bg-white p-6 rounded-3xl border border-gray-200 shadow-md">
+      <h2 class="text-2xl font-bold text-marca-oscuro mb-4 flex items-center space-x-2">
+        <span>📍 Ubicación Estratégica: Cunit, Cubelles y Barcelona</span>
+      </h2>
+      <p class="text-gray-600 text-sm mb-6">Las sedes principales están situadas a pocos minutos entre sí, con fácil conexión por carretera (C-32, AP-7) y tren de cercanías con Barcelona Aeropuerto y centro.</p>
+      
+      <!-- Mapa Integrado (Google Maps con marcadores de la zona) -->
+      <div class="w-full h-80 sm:h-96 rounded-2xl overflow-hidden border border-gray-300 shadow-inner">
+        <iframe class="w-full h-full border-0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d47963.64939281747!2d1.5937402!3d41.1983333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a382e77b6329bf%3A0xa00fae005a306c0!2sCunit%2C%20Tarragona!5e0!3m2!1ses!2ses!4v1710000000000!5m2!1ses!2ses" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ENTORNO Y COSTA -->
+  <section class="py-12 bg-slate-100 border-y border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <div>
+          <span class="text-marca-secundario font-bold uppercase text-xs tracking-wider">Turismo y Deporte</span>
+          <h2 class="text-3xl font-extrabold text-marca-oscuro mt-1 mb-4">La Costa de Cunit y Cubelles</h2>
+          <p class="text-gray-600 text-sm leading-relaxed mb-4">
+            Kilómetros de playa de arena fina, clima mediterráneo templado en marzo y una completa oferta gastronómica y de ocio.
+          </p>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Un escenario perfecto para combinar baloncesto de máximo nivel con momentos inolvidables de equipo en la costa catalana.
+          </p>
+        </div>
+        
+        <!-- Imagen Costa (Reemplaza la ruta por tu foto) -->
+        <div class="rounded-3xl overflow-hidden shadow-lg border-2 border-white">
+          <img src="/costa-cunit-cubelles.jpg" alt="Costa de Cunit y Cubelles" class="w-full h-72 object-cover bg-gray-300">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PABELLONES DE COMPETICIÓN -->
+  <section class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-extrabold text-marca-oscuro">Pabellones de Competición</h2>
+      <p class="text-gray-600 mt-2 text-sm">Pistas homologadas de parquet y vestuarios de primer nivel</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-8">
+      <!-- Pabellón Cunit -->
+      <div class="bg-white rounded-3xl border border-gray-200 shadow-md overflow-hidden flex flex-col justify-between">
+        <img src="/pabellon-cunit.jpg" alt="Pabellón Municipal Cunit" class="w-full h-64 object-cover bg-gray-300">
+        <div class="p-6">
+          <span class="bg-marca-principal/10 text-marca-principal font-bold text-xs px-3 py-1 rounded-full">Sede 1 · Cunit</span>
+          <h3 class="text-xl font-bold text-marca-oscuro mt-3 mb-2">Pabellón Municipal de Cunit</h3>
+          <p class="text-gray-600 text-sm leading-relaxed mb-4">Instalación moderna con gran capacidad de público, pistas acondicionadas y zona de cafetería.</p>
+        </div>
+      </div>
+
+      <!-- Pabellón Cubelles -->
+      <div class="bg-white rounded-3xl border border-gray-200 shadow-md overflow-hidden flex flex-col justify-between">
+        <img src="/pabellon-cubelles.jpg" alt="Pabellón Municipal Cubelles" class="w-full h-64 object-cover bg-gray-300">
+        <div class="p-6">
+          <span class="bg-marca-secundario/10 text-marca-secundario font-bold text-xs px-3 py-1 rounded-full">Sede 2 · Cubelles</span>
+          <h3 class="text-xl font-bold text-marca-oscuro mt-3 mb-2">Pabellón Municipal de Cubelles</h3>
+          <p class="text-gray-600 text-sm leading-relaxed mb-4">Ubicación céntrica, accesos adaptados y perfectas condiciones técnicas para categorías formativas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ALOJAMIENTO HOTELES 3 ESTRELLAS -->
+  <section class="py-16 bg-slate-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <!-- Imagen Hoteles (Reemplaza la ruta por tu foto) -->
+        <div class="rounded-3xl overflow-hidden shadow-2xl border border-slate-700 order-2 md:order-1">
+          <img src="/hoteles-3estrellas.jpg" alt="Hoteles 3 Estrellas Oficiales" class="w-full h-72 object-cover bg-slate-800">
+        </div>
+
+        <div class="order-1 md:order-2">
+          <span class="text-marca-acento font-bold uppercase text-xs tracking-wider">Alojamiento Oficial</span>
+          <h2 class="text-3xl font-extrabold mt-1 mb-4">Hoteles 3 Estrellas Selección</h2>
+          <p class="text-gray-300 text-sm leading-relaxed mb-4">
+            Alojamiento para deportistas y familias en complejos hoteleros de 3 estrellas situados en la franja costera.
+          </p>
+          <ul class="space-y-2 text-sm text-gray-300 mb-6">
+            <li class="flex items-center space-x-2">
+              <span class="text-marca-acento">✓</span> <span>Régimen de Pensión Completa (buffet adaptado a deportistas).</span>
+            </li>
+            <li class="flex items-center space-x-2">
+              <span class="text-marca-acento">✓</span> <span>Habitaciones múltiples para equipos y dobles/individuales para familias.</span>
+            </li>
+            <li class="flex items-center space-x-2">
+              <span class="text-marca-acento">✓</span> <span>Próximos a las instalaciones deportivas.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COLABORADORES -->
+  <section class="bg-slate-900 py-12 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 text-center">
+      <p class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-8">Organizan y Colaboran</p>
+      <div class="flex flex-wrap justify-center items-center gap-10 sm:gap-16">
+        <div class="p-2 transition duration-300 hover:scale-105"><img src="/logoose.svg" alt="OSE Barcelona" class="h-14 sm:h-20 w-auto object-contain"></div>
+        <div class="p-2 transition duration-300 hover:scale-105"><img src="/logocunit.svg" alt="A.B. Cunit" class="h-14 sm:h-20 w-auto object-contain"></div>
+        <div class="p-2 transition duration-300 hover:scale-105"><img src="/logocube.svg" alt="C.B. Cubelles" class="h-14 sm:h-20 w-auto object-contain"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-slate-950 text-gray-500 py-8 text-center text-xs border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4">
+      <img src="/PenedesMaritimCuplogo.svg" alt="Logo Penedès Marítim Cup" class="h-8 w-auto mx-auto mb-3">
+      <p class="text-gray-400 font-semibold mb-1">PENEDÈS MARÍTIM BASKETBALL CUP 2027</p>
+      <p>© 2027 A. B. Cunit & OSE Barcelona & C. B. Cubelles. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
